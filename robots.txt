@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /react/
+Disallow: /
+
+Sitemap: https://aseduch.cl/sitemap.xml
