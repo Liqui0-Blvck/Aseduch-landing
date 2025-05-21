@@ -45,7 +45,7 @@ export default function HeroSection() {
             <a href="https://instagram.com/aseduch_/?hl=es" target="_blank" rel="noopener noreferrer" className="text-[#1E3A5F] hover:text-pink-600 transition-colors" aria-label="Instagram">
               <FaInstagram size={24} />
             </a>
-            <a href="https://youtube.com/UCSmp_0yZJG5On1kC1-mqbjw/videos" target="_blank" rel="noopener noreferrer" className="text-[#1E3A5F] hover:text-red-600 transition-colors" aria-label="YouTube">
+            <a href="https://youtube.com/@asociaciónAseduch24/videos" target="_blank" rel="noopener noreferrer" className="text-[#1E3A5F] hover:text-red-600 transition-colors" aria-label="YouTube">
               <FaYoutube size={24} />
             </a>
             <a href="https://www.linkedin.com/company/asociación-de-educadores-de-chile/" target="_blank" rel="noopener noreferrer" className="text-[#1E3A5F] hover:text-blue-700 transition-colors" aria-label="LinkedIn">

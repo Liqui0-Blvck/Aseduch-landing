@@ -1,8 +1,9 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
-import { FaFilePdf, FaCalendarAlt, FaHandHoldingUsd, FaArrowRight, FaDownload, FaCopy } from 'react-icons/fa';
 import { Seo } from '../../components/Seo';
-import { DocumentButton } from '../../components/DocumentLink';
+import FoundationDocumentCard from './FoundationDocumentCard';
+import FoundationActivityCard from './FoundationActivityCard';
+import FoundationDonationCard from './FoundationDonationCard';
 
 // Sample data - replace with actual data from your CMS/API
 const documents = [
@@ -165,182 +166,87 @@ export default function Foundation() {
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Documents Tab */}
         {activeTab === 'documentos' && (
-          <motion.div
+          <motion.section
             initial="hidden"
             animate="visible"
             variants={staggerContainer}
             className="space-y-8"
           >
-            <motion.h2 variants={fadeInUp} className="text-3xl font-bold text-gray-900 mb-8">
-              Documentos Institucionales
-            </motion.h2>
-            
+            <motion.div variants={fadeInUp} className="mb-8 text-center">
+              <h2 className="text-3xl font-extrabold text-blue-900 mb-2 tracking-tight">Documentos Institucionales</h2>
+              <p className="text-lg text-blue-700 max-w-2xl mx-auto">
+                Accede y descarga los principales documentos que rigen y respaldan el trabajo de la Fundación ASEDUCH.
+              </p>
+            </motion.div>
             <motion.div 
               variants={staggerContainer}
-              className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
+              className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
             >
               {documents.map((doc) => (
-                <motion.div
-                  key={doc.id}
-                  variants={fadeInUp}
-                  className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
-                >
-                  <div className="p-6">
-                    <div className="flex items-center mb-4">
-                      <div className="p-3 rounded-full bg-blue-100 text-blue-600">
-                        <FaFilePdf className="w-6 h-6" />
-                      </div>
-                      <div className="ml-4">
-                        <p className="text-sm font-medium text-gray-500">{doc.type} • {doc.size}</p>
-                      </div>
-                    </div>
-                    <h3 className="text-lg font-semibold text-gray-900 mb-2">{doc.title}</h3>
-                    <div className="flex space-x-4 mt-4">
-                      <DocumentButton 
-                        url={doc.url}
-                        className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium"
-                        icon={FaArrowRight}
-                      >
-                        Ver en línea
-                      </DocumentButton>
-                      <a
-                        href={doc.url}
-                        download
-                        className="inline-flex items-center text-gray-600 hover:text-gray-800 font-medium"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        Descargar <FaDownload className="ml-2" />
-                      </a>
-                    </div>
-                  </div>
+                <motion.div key={doc.id} variants={fadeInUp}>
+                  <FoundationDocumentCard doc={doc} />
                 </motion.div>
               ))}
             </motion.div>
-          </motion.div>
+          </motion.section>
         )}
 
         {/* Activities Tab */}
         {activeTab === 'actividades' && (
-          <motion.div
+          <motion.section
             initial="hidden"
             animate="visible"
             variants={staggerContainer}
             className="space-y-8"
           >
-            <motion.h2 variants={fadeInUp} className="text-3xl font-bold text-gray-900 mb-8">
-              Próximas Actividades
-            </motion.h2>
-            
+            <motion.div variants={fadeInUp} className="mb-8 text-center">
+              <h2 className="text-3xl font-extrabold text-blue-900 mb-2 tracking-tight">Próximas Actividades</h2>
+              <p className="text-lg text-blue-700 max-w-2xl mx-auto">
+                Participa en los eventos, talleres y seminarios que impulsa la Fundación para fortalecer la educación en Chile.
+              </p>
+            </motion.div>
             <motion.div 
               variants={staggerContainer}
-              className="space-y-8"
+              className="space-y-10"
             >
               {activities.map((activity) => (
-                <motion.div
-                  key={activity.id}
-                  variants={fadeInUp}
-                  className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 md:flex"
-                >
-                  <div className="md:w-1/3 h-48 md:h-auto">
-                    <img 
-                      className="w-full h-full object-cover" 
-                      src={activity.image} 
-                      alt={activity.title} 
-                    />
-                  </div>
-                  <div className="p-6 md:w-2/3">
-                    <div className="flex items-center text-gray-500 mb-2">
-                      <FaCalendarAlt className="mr-2" />
-                      <span>{activity.date}</span>
-                    </div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">{activity.title}</h3>
-                    <p className="text-gray-600 mb-4">{activity.description}</p>
-                    <a 
-                      href={activity.url}
-                      className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium"
-                    >
-                      Ver más detalles <FaArrowRight className="ml-2" />
-                    </a>
-                  </div>
+                <motion.div key={activity.id} variants={fadeInUp}>
+                  <FoundationActivityCard activity={activity} />
                 </motion.div>
               ))}
             </motion.div>
-          </motion.div>
+          </motion.section>
         )}
 
         {/* Donations Tab */}
         {activeTab === 'donaciones' && (
-          <motion.div
+          <motion.section
             initial="hidden"
             animate="visible"
             variants={staggerContainer}
             className="space-y-12"
           >
-            <motion.div variants={fadeInUp} className="text-center max-w-3xl mx-auto">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Apoya Nuestra Misión</h2>
-              <p className="text-xl text-gray-600">
-                Tu donación nos ayuda a seguir trabajando por una educación de calidad en Chile.
-                ¡Cada aporte cuenta!
+            <motion.div variants={fadeInUp} className="text-center max-w-3xl mx-auto mb-8">
+              <h2 className="text-3xl font-extrabold text-blue-900 mb-2 tracking-tight">Apoya Nuestra Misión</h2>
+              <p className="text-lg text-blue-700">
+                Tu donación nos ayuda a seguir trabajando por una educación de calidad en Chile. ¡Cada aporte cuenta!
               </p>
             </motion.div>
 
             <motion.div 
               variants={staggerContainer}
-              className="grid md:grid-cols-2 gap-8"
+              className="grid md:grid-cols-2 gap-10"
             >
               {donationOptions.map((option) => (
-                <motion.div
-                  key={option.id}
-                  variants={fadeInUp}
-                  className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300"
-                >
-                  <div className="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center text-blue-600 mb-4">
-                    <FaHandHoldingUsd className="w-6 h-6" />
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">{option.title}</h3>
-                  <p className="text-gray-600 mb-4">{option.description}</p>
-                  
-                  {option.details ? (
-                    <div className="space-y-2 mt-4">
-                      {option.details.map((detail, index) => (
-                        <div key={index} className="flex">
-                          <span className="text-blue-600 mr-2">•</span>
-                          <span className="text-gray-700">{detail}</span>
-                        </div>
-                      ))}
-                      <div className="mt-4 pt-4 border-t border-gray-100">
-                        <button
-                          onClick={() => {
-                            const details = option.details?.join('\n') || '';
-                            navigator.clipboard.writeText(details);
-                          }}
-                          className="text-sm text-blue-600 hover:text-blue-800 font-medium flex items-center"
-                        >
-                          <FaCopy className="mr-1" /> Copiar datos bancarios
-                        </button>
-                      </div>
-                    </div>
-                  ) : (
-                    <div className="space-y-3 mt-4">
-                      {option.platforms?.map((platform) => (
-                        <a
-                          key={platform.name}
-                          href={platform.url}
-                          className="block w-full text-center px-4 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors duration-200"
-                        >
-                          Donar con {platform.name}
-                        </a>
-                      ))}
-                    </div>
-                  )}
+                <motion.div key={option.id} variants={fadeInUp}>
+                  <FoundationDonationCard option={option} />
                 </motion.div>
               ))}
             </motion.div>
 
             <motion.div 
               variants={fadeInUp}
-              className="bg-blue-50 rounded-xl p-8 text-center mt-12"
+              className="bg-gradient-to-r from-blue-100 to-blue-200 rounded-xl p-8 text-center mt-12 border border-blue-200 shadow-sm"
             >
               <h3 className="text-xl font-semibold text-blue-800 mb-3">
                 ¿Necesitas factura por tu donación?
@@ -352,7 +258,7 @@ export default function Foundation() {
                 Las donaciones son deducibles de impuestos según la Ley de Donaciones con Fines Sociales.
               </p>
             </motion.div>
-          </motion.div>
+          </motion.section>
         )}
       </main>
     </div>
