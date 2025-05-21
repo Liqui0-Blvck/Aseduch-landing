@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
-import { useLocation, Link, useNavigate } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 import { HiMenu, HiX } from "react-icons/hi";
+import { FaFacebook, FaInstagram, FaYoutube, FaLinkedin } from "react-icons/fa";
+import { FaX } from "react-icons/fa6";
 import logo from "../assets/aseduch-logo.jpg";
 
 export default function Navbar() {
@@ -8,7 +10,6 @@ export default function Navbar() {
   const [showNavbar, setShowNavbar] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [mobileOpen, setMobileOpen] = useState(false);
-  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -32,7 +33,8 @@ export default function Navbar() {
     { to: "/react/docs", label: "Documentos" },
     { to: "/react/partners", label: "Socios" },
     { to: "/react/news", label: "Noticias" },
-    { to: "/react/medios", label: "Medios" },
+    { to: "/react/media", label: "Medios" },
+    { to: "/react/foundation", label: "Fundación" },
   ];
 
   return (
@@ -44,8 +46,17 @@ export default function Navbar() {
       >
         <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
           {/* Logo */}
-          <div className="flex items-center space-x-2">
-            <img src={logo} alt="ASEDUCH Logo" className="h-14" />
+          <div className="flex items-center space-x-4">
+            <img src={logo} alt="ASEDUCH Logo" className="h-16" />
+            {/* <img src={logoFundacion} alt="Fundación ASEDUCH" className="h-14" /> */}
+            <div className="hidden md:block">
+              <div className="text-lg font-bold text-gray-800">
+                ASEDUCH
+              </div>
+              <div className="text-xs text-gray-600">
+                Asociación de Educadores de Chile A.G.
+              </div>
+            </div>
           </div>
 
           {/* Desktop Menu */}
@@ -65,22 +76,38 @@ export default function Navbar() {
             ))}
           </nav>
 
-          {/* CTA */}
-          <button
-            onClick={() => navigate("/react/partners")}
-            className="hidden md:inline-block bg-[#C0392B] hover:bg-red-700 text-white px-4 py-2 rounded-full text-sm font-bold"
-          >
-            ¡Hazte Socio!
-          </button>
+          {/* Social Media Links */}
+          <div className="hidden md:flex space-x-4">
+            <a href="https://facebook.com/Aseduch/" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-blue-600 transition" aria-label="Facebook">
+              <FaFacebook size={20} />
+            </a>
+            <a href="https://x.com/aseduch1" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-blue-400 transition mt-[0.1rem]" aria-label="Twitter">
+              <FaX size={17} />
+            </a>
+            <a href="https://instagram.com/aseduch_/?hl=es" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-pink-600 transition" aria-label="Instagram">
+              <FaInstagram size={20} />
+            </a>
+            <a href="https://youtube.com/UCSmp_0yZJG5On1kC1-mqbjw/videos" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-red-600 transition" aria-label="YouTube">
+              <FaYoutube size={20} />
+            </a>
+            <a href="https://www.linkedin.com/company/asociación-de-educadores-de-chile/" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-blue-600 transition" aria-label="LinkedIn">
+              <FaLinkedin size={20} />
+            </a>
+          </div>
 
           {/* Mobile Hamburger */}
-          <button
-            onClick={() => setMobileOpen((o) => !o)}
-            className="md:hidden p-2 text-gray-800 hover:text-blue-600 transition"
-            aria-label="Toggle menu"
-          >
-            {mobileOpen ? null : <HiMenu size={24} />}
-          </button>
+          <div className="flex items-center md:hidden">
+            <div className="text-sm font-bold text-gray-800 mr-4">
+              ASEDUCH
+            </div>
+            <button
+              onClick={() => setMobileOpen((o) => !o)}
+              className="p-2 text-gray-800 hover:text-blue-600 transition"
+              aria-label="Toggle menu"
+            >
+              {mobileOpen ? null : <HiMenu size={24} />}
+            </button>
+          </div>
         </div>
       </header>
 
@@ -97,8 +124,11 @@ export default function Navbar() {
           mobileOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
-        <div className="px-6 py-4 flex items-center justify-between border-b-zinc-300">
-          <img src={logo} alt="ASEDUCH Logo" className="h-12" />
+        <div className="px-6 py-4 flex items-center justify-between border-b border-zinc-300">
+          <div className="flex items-center space-x-3">
+            <img src={logo} alt="ASEDUCH Logo" className="h-12" />
+            {/* <img src={logoFundacion} alt="Fundación ASEDUCH" className="h-10" /> */}
+          </div>
           <button
             onClick={() => setMobileOpen(false)}
             className="p-2 text-gray-800 hover:text-blue-600 transition"
@@ -122,15 +152,23 @@ export default function Navbar() {
               {link.label}
             </Link>
           ))}
-          <button
-            onClick={() => {
-              setMobileOpen(false);
-              navigate("/react/partners");
-            }}
-            className="mt-6 bg-[#C0392B] hover:bg-red-700 text-white px-4 py-2 rounded-full text-center font-bold"
-          >
-            ¡Hazte Socio!
-          </button>
+          <div className="flex justify-center space-x-6 mt-6">
+            <a href="https://facebook.com/Aseduch/" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-blue-600 transition" aria-label="Facebook">
+              <FaFacebook size={24} />
+            </a>
+            <a href="https://x.com/aseduch1" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-blue-400 transition" aria-label="Twitter">
+              <FaX size={24} />
+            </a>
+            <a href="https://instagram.com/aseduch_/?hl=es" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-pink-600 transition" aria-label="Instagram">
+              <FaInstagram size={24} />
+            </a>
+            <a href="https://youtube.com/UCSmp_0yZJG5On1kC1-mqbjw/videos" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-red-600 transition" aria-label="YouTube">
+              <FaYoutube size={24} />
+            </a>
+            <a href="https://www.linkedin.com/company/asociación-de-educadores-de-chile/" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-blue-600 transition" aria-label="LinkedIn">
+              <FaLinkedin size={24} />
+            </a>
+          </div>
         </nav>
       </aside>
     </>

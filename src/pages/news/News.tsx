@@ -25,6 +25,7 @@ export default function News() {
   const { posts, loading, hasMore, page, setPage } = usePosts({
     perPage: PER_PAGE,
     search,
+    categoryName: "noticias"
   });
 
 

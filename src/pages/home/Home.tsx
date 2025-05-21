@@ -7,6 +7,7 @@ const BrandSection     = lazy(() => import("./components/BrandSection"));
 const AboutSection     = lazy(() => import("./components/AboutSection"));
 const BenefitsSection  = lazy(() => import("./components/BenefitsSection"));
 const NewsSection      = lazy(() => import("./components/NewsSection"));
+const PaymentSection   = lazy(() => import("./components/PaymentSection"));
 
 // Un spinner sencillito
 function Loader() {
@@ -44,6 +45,7 @@ export default function Home() {
           <BrandSection />
           <AboutSection />
           <BenefitsSection />
+          <PaymentSection />
           <NewsSection />
         </Suspense>
       </ErrorBoundary>

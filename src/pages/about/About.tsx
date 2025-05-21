@@ -7,15 +7,17 @@ import {
   FaBalanceScale,
   FaUsers,
   FaComments,
-  FaChalkboardTeacher,
+  FaChalkboardTeacher
 } from "react-icons/fa";
+import { DocumentosInstitucionales } from "../../components/DocumentosInstitucionales";
 
+// Importar imágenes
 import denise_ibarboure from "../../assets/denise-ibarboure.jpg";
 import gaston_eduardo from "../../assets/gaston-eduardo.jpg";
 import james from "../../assets/james.jpg";
 import jose_luis from "../../assets/jose-luis.jpg";
 import tamara_constanzo from "../../assets/tamara-constanzo.jpg";
-import directiva_grupo from "../../assets/foto-aseduch-grupo.jpg";
+import directiva_grupo from "../../assets/foto-aseduch-grupo.jpg"; // Asegúrate de actualizar esta imagen
 
 export default function AboutPage() {
   const directiva = [
@@ -161,44 +163,70 @@ export default function AboutPage() {
           </div>
         </motion.div>
 
+        {/* Documentos Institucionales */}
+        <DocumentosInstitucionales />
+
         {/* Directiva */}
         <motion.div
-          className="text-center"
+          className="text-center pt-16"
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-3xl font-bold text-[#1E3A5F] mb-12">Nuestra Directiva</h2>
+          <h2 className="text-3xl font-bold text-[#1E3A5F] mb-12">Nuestro Equipo Directivo</h2>
 
           {/* Presidente */}
-          <div className="grid md:grid-cols-2 gap-8 items-center mb-20">
-            <img
-              src={jose_luis}
-              alt="José Luis Velasco"
-              className="rounded-xl shadow-lg w-full object-cover max-h-[400px]"
-            />
-            <div className="text-left">
-              <h3 className="text-2xl font-bold text-[#1E3A5F] mb-2">José Luis Velasco</h3>
-              <p className="text-gray-700 leading-relaxed">
-                Profesor de Historia y Geografía y Master en Artes Liberales en Pedagogía. Con experiencia docente y de gestión en educación superior y escolar. Ha liderado iniciativas en sectores público y privado, con foco en emprendimiento y desarrollo social.
-              </p>
+          <div className="mb-16 text-center">
+            <div className="max-w-4xl mx-auto">
+              <div className="flex flex-col items-center">
+                <div className="w-48 h-48 rounded-full overflow-hidden border-4 border-white shadow-xl mb-6">
+                  <img
+                    src={jose_luis}
+                    alt="José Luis Velasco"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <h3 className="text-2xl font-bold text-[#1E3A5F] mb-2">José Luis Velasco</h3>
+                <p className="text-lg text-[#C0392B] font-medium mb-4">Presidente</p>
+                <p className="text-gray-700 leading-relaxed max-w-2xl">
+                  Profesor de Historia y Geografía y Master en Artes Liberales en Pedagogía. Con experiencia docente y de gestión en educación superior y escolar. Ha liderado iniciativas en sectores público y privado, con foco en emprendimiento y desarrollo social.
+                </p>
+              </div>
             </div>
           </div>
 
           {/* Otros miembros */}
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-12 max-w-6xl mx-auto">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-8 max-w-6xl mx-auto">
             {directiva.map((person) => (
-              <div key={person.id} className="flex flex-col items-center space-y-4">
-                <img
-                  src={person.src}
-                  alt={person.alt}
-                  className="w-36 h-36 rounded-full object-cover shadow-lg border-4 border-white"
-                />
-                <h4 className="text-lg font-bold text-[#1E3A5F]">{person.title}</h4>
-                <p className="text-sm text-gray-600 max-w-xs">{person.description}</p>
-              </div>
+              <motion.div 
+                key={person.id} 
+                className="flex flex-col items-center text-center p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow"
+                whileHover={{ y: -5 }}
+              >
+                <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-white shadow-lg mb-4">
+                  <img
+                    src={person.src}
+                    alt={person.alt}
+                    className="w-full h-full object-cover"
+                    onError={(e) => {
+                      const target = e.target as HTMLImageElement;
+                      target.src = 'https://via.placeholder.com/150?text=Imagen+no+disponible';
+                    }}
+                  />
+                </div>
+                <h4 className="text-lg font-bold text-[#1E3A5F] mb-1">{person.title}</h4>
+                <p className="text-sm text-gray-600">{person.description}</p>
+              </motion.div>
             ))}
+          </div>
+          
+          {/* Nota sobre la foto del directorio */}
+          <div className="mt-16 bg-blue-50 p-6 rounded-xl max-w-4xl mx-auto">
+            <h4 className="text-lg font-semibold text-[#1E3A5F] mb-3">Sobre Nuestro Equipo</h4>
+            <p className="text-gray-700">
+              Nuestro equipo directivo está compuesto por profesionales de la educación comprometidos con la mejora continua del sistema educativo chileno. Trabajamos en conjunto para representar los intereses de los educadores y promover una educación de calidad en todo el país.
+            </p>
           </div>
         </motion.div>
 
