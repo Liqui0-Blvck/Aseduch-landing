@@ -1,7 +1,9 @@
 import { useState } from "react";
 import { motion, type Variants } from "framer-motion";
 
-type MediaType = "videos" | "podcasts" | "presentaciones";
+import { FaPodcast, FaVideo, FaBroadcastTower } from "react-icons/fa";
+// import PrensaApiFeed from "./PrensaApiFeed";
+type MediaType = "radio" | "videos" | "podcasts";
 
 /* Esta interfaz define la estructura de cada elemento multimedia.
    - Para videos de YouTube, guardamos solo el ID del video en la URL
@@ -10,14 +12,22 @@ type MediaType = "videos" | "podcasts" | "presentaciones";
 interface MediaItem {
   id: number;
   title: string;
-  url: string;
+  url?: string; // Para videos y podcasts
   start?: number;
   thumbnail?: string;
+  date?: string;
+  description?: string;
+  link?: string; // Para prensa y radio
 }
 
 
 /* Lista de videos de YouTube. Cada video tiene su ID único de YouTube
    y podemos especificar en qué segundo debe comenzar */
+
+const radio: MediaItem[] = [
+  { id: 1, title: "Entrevista Radio Cooperativa", date: "2025-03-15", description: "Participación de ASEDUCH A.G. en programa matinal.", link: "#" },
+];
+
 const videoUrls: MediaItem[] = [
   {
     id: 1,
@@ -35,17 +45,13 @@ const videoUrls: MediaItem[] = [
 ];
 
 const podcasts: MediaItem[] = [
-
+  { id: 1, title: "Entrevista Radio Cooperativa", date: "2025-03-15", description: "Entrevista Radio Cooperativa", url: "https://open.spotify.com/embed/episode/2RE6DNXVKxoX0bZ7gWOt6X" },
 ];
 
-const presentaciones: MediaItem[] = [
-
-];
-
-const tabs: { label: string; key: MediaType }[] = [
-  { label: "Videos", key: "videos" },
-  { label: "Podcasts", key: "podcasts" },
-  { label: "Presentaciones", key: "presentaciones" },
+const tabs: { label: string; key: MediaType; icon: React.ReactNode }[] = [
+  { label: "Radio", key: "radio", icon: <FaBroadcastTower /> },
+  { label: "Videos", key: "videos", icon: <FaVideo /> },
+  { label: "Podcasts", key: "podcasts", icon: <FaPodcast /> },
 ];
 
 
@@ -57,24 +63,28 @@ const tabItem: Variants = {
   hidden: { opacity: 0, y: -10 },
   show: { opacity: 1, y: 0, transition: { duration: 0.3 } },
 };
-const cardVariants: Variants = {
-  hidden: { opacity: 0, y: 20 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.4 } },
-};
+
 
 export default function MediaSection() {
-  const [activeTab, setActiveTab] = useState<MediaType>("videos");
+  const [activeTab, setActiveTab] = useState<MediaType>("radio");
 
-
-  const items: MediaItem[] =
-    activeTab === "videos"
-      ? videoUrls
-      : activeTab === "podcasts"
-      ? podcasts
-      : presentaciones;
+  let items: MediaItem[] = [];
+  switch (activeTab) {
+    case "radio":
+      items = radio;
+      break;
+    case "videos":
+      items = videoUrls;
+      break;
+    case "podcasts":
+      items = podcasts;
+      break;
+    default:
+      items = [];
+  }
 
   return (
-    <section className="bg-white py-20">
+    <section className="bg-white py-20 min-h-screen">
       <div className="max-w-7xl mx-auto px-6 space-y-8">
         {/* Header */}
         <div className="text-center space-y-2">
@@ -86,7 +96,7 @@ export default function MediaSection() {
 
         {/* Tabs */}
         <motion.div
-          className="flex justify-center space-x-4"
+          className="flex justify-center gap-4 mt-8"
           initial="hidden"
           animate="show"
           variants={tabContainer}
@@ -94,96 +104,74 @@ export default function MediaSection() {
           {tabs.map((tab) => (
             <motion.button
               key={tab.key}
-              variants={tabItem}
-              onClick={() => setActiveTab(tab.key)}
-              className={`px-6 py-2 font-medium rounded-full transition ${
+              className={`px-5 py-2 rounded-full font-semibold text-lg border transition-all duration-200 flex items-center gap-2 ${
                 activeTab === tab.key
-                  ? "bg-[#1E3A5F] text-white"
-                  : "bg-gray-200 text-gray-700 hover:bg-gray-300"
+                  ? "bg-[#1E3A5F] text-white border-[#1E3A5F]"
+                  : "bg-gray-100 text-[#1E3A5F] border-gray-300 hover:bg-gray-200"
               }`}
+              onClick={() => setActiveTab(tab.key)}
+              variants={tabItem}
             >
+              {tab.icon}
               {tab.label}
             </motion.button>
           ))}
         </motion.div>
 
-        {/* Grid de Media */}
-        {items.length > 0 ? (
-          <motion.div
-            className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3"
-            initial="hidden"
-            animate="show"
-            variants={tabContainer}
-          >
-            {items.map((item) => {
-
-              /* Construimos la URL del embed según el tipo de contenido:
-                 - Para YouTube, usamos la versión nocookie por privacidad y agregamos
-                   el parámetro start si está especificado
-                 - Para otros tipos de contenido, usamos la URL directamente */
-              const embedSrc =
-                activeTab === "videos"
-                  ? `https://www.youtube-nocookie.com/embed/${item.url}${
-                      item.start ? `?start=${item.start}` : ""
-                    }`
-                  : item.url;
-
-              return (
-                <motion.div
-                  key={item.id}
-                  variants={cardVariants}
-                  className="bg-gray-50 rounded-2xl overflow-hidden shadow hover:shadow-lg transition"
-                >
-                  {/* Video */}
-                  {activeTab === "videos" && (
-                    <div className="aspect-video bg-black">
-                      <iframe
-                        src={embedSrc}
-                        title={item.title}
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowFullScreen
-                        className="w-full h-full"
-                      />
-                    </div>
-                  )}
-
-                  {/* Podcast */}
-                  {activeTab === "podcasts" && (
-                    <div className="p-6 flex flex-col items-center">
-                      <audio controls className="w-full">
-                        <source src={item.url} />
-                        Tu navegador no soporta audio.
-                      </audio>
-                    </div>
-                  )}
-
-                  {/* Presentación */}
-                  {activeTab === "presentaciones" && (
-                    <div className="aspect-video bg-gray-100">
-                      <iframe
-                        src={item.url}
-                        title={item.title}
-                        allowFullScreen
-                        className="w-full h-full"
-                      />
-                    </div>
-                  )}
-
-                  {/* Título */}
-                  <div className="p-4">
-                    <h3 className="text-lg font-semibold text-gray-900">
-                      {item.title}
-                    </h3>
+        {/* Contenido por tab */}
+        <div>
+          {/* {activeTab === "prensa" && (
+            <PrensaApiFeed />
+          )} */}
+          {activeTab === "radio" && (
+            <div className="grid md:grid-cols-2 gap-8">
+              {items.map((item) => (
+                <a href={item.link} key={item.id} className="block bg-gray-50 rounded-xl shadow p-3 hover:shadow-md transition">
+                  <div className="flex items-center gap-3 mb-2 text-green-700">
+                    <FaBroadcastTower />
+                    <span className="font-bold">{item.title}</span>
                   </div>
-                </motion.div>
-              );
-            })}
-          </motion.div>
-        ) : (
-          <p className="text-center text-gray-500">
-            No hay elementos en esta categoría.
-          </p>
-        )}
+                  <div className="text-xs text-gray-500 mb-1">{item.date}</div>
+                  <div className="text-gray-700 mb-2">{item.description}</div>
+                </a>
+              ))}
+            </div>
+          )}
+          {activeTab === "videos" && (
+            <div className="grid md:grid-cols-2 gap-8">
+              {items.map((item) => (
+                <div key={item.id} className="bg-gray-50 rounded-xl shadow p-6 flex flex-col items-center">
+                  <div className="flex items-center gap-3 mb-2 text-indigo-700">
+                    <FaVideo />
+                    <span className="font-bold">{item.title}</span>
+                  </div>
+                  <div className="text-xs text-gray-500 mb-1">{item.date}</div>
+                  <div className="text-gray-700 mb-2">{item.description}</div>
+                  <div className="w-full aspect-video rounded overflow-hidden mt-2">
+                    <iframe src={`https://www.youtube.com/embed/${item.url}${item.start ? `?start=${item.start}` : ""}`} title={item.title} allowFullScreen className="w-full h-60"></iframe>
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
+          {activeTab === "podcasts" && (
+            <div className="grid md:grid-cols-2 gap-8">
+              {items.map((item) => (
+                <div key={item.id} className="bg-gray-50 rounded-xl shadow p-6 flex flex-col items-center">
+                  <div className="flex items-center gap-2 mb-1 text-pink-700">
+                    <FaPodcast className="text-base" />
+                    <span className="font-semibold text-base">{item.title}</span>
+                  </div>
+                  <div className="text-xs text-gray-400 mb-0.5">{item.date}</div>
+                  <div className="text-sm text-gray-600 mb-1 text-center">{item.description}</div>
+                  <div className="w-full rounded overflow-hidden mt-1 h-20">
+                    <iframe src={item.url} title={item.title} allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" className="w-full h-24"></iframe>
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
       </div>
     </section>
   );
