@@ -12,8 +12,7 @@ interface PdfViewerProps {
   onClose: () => void;
 }
 
-// Create a proxy URL to handle CORS
-const corsAnywhereUrl = 'https://cors-anywhere.herokuapp.com/';
+
 
 export function PdfViewer({ fileUrl, onClose }: PdfViewerProps) {
   const [isLoading, setIsLoading] = useState(true);
@@ -98,7 +97,7 @@ export function PdfViewer({ fileUrl, onClose }: PdfViewerProps) {
           <div className="h-full w-full">
             <Worker workerUrl="https://unpkg.com/pdfjs-dist@3.11.174/build/pdf.worker.min.js">
               <Viewer
-                fileUrl={corsAnywhereUrl + pdfUrl}
+                fileUrl={pdfUrl}
                 plugins={[defaultLayoutPluginInstance]}
                 defaultScale={SpecialZoomLevel.PageFit}
                 onDocumentLoad={handleDocumentLoadSuccess}

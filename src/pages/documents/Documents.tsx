@@ -38,38 +38,38 @@ const documentosPorCategoria: Record<Categoria, { titulo: string; documentos: Do
         categoria: 'analisis',
         destacado: true,
         type: 'pdf',
-        directUrl: "/documentos/analisis/propuestas-reactivacion-educativa-2023.pdf"
+        // directUrl: "/documentos/analisis/propuestas-reactivacion-educativa-2023.pdf"
       },
-      {
-        id: 'analisis-simce-2022',
-        title: "Análisis de Resultados SIMCE 2022",
-        description: "Evaluación detallada de los resultados del SIMCE 2022 con recomendaciones para el sistema educativo.",
-        url: "/documentos/analisis/analisis-resultados-simce-2022.pdf",
-        fecha: "10/06/2023",
-        categoria: 'analisis',
-        type: 'pdf',
-        directUrl: "/documentos/analisis/analisis-resultados-simce-2022.pdf"
-      },
-      {
-        id: 'autoridad-docente',
-        title: "La Autoridad Docente en el Siglo XXI",
-        description: "Análisis sobre el rol del docente y su autoridad pedagógica en el contexto educativo actual.",
-        url: "/documentos/analisis/autoridad-docente-2023.pdf",
-        fecha: "05/04/2023",
-        categoria: 'analisis',
-        type: 'pdf',
-        directUrl: "/documentos/analisis/autoridad-docente-2023.pdf"
-      },
-      {
-        id: 'bases-constitucion',
-        title: "Bases para una Educación Inclusiva",
-        description: "Propuestas para garantizar una educación inclusiva y de calidad en la nueva Constitución.",
-        url: "/documentos/analisis/bases-educacion-inclusiva-2023.pdf",
-        fecha: "20/04/2023",
-        categoria: 'analisis',
-        type: 'pdf',
-        directUrl: "/documentos/analisis/bases-educacion-inclusiva-2023.pdf"
-      }
+      // {
+      //   id: 'analisis-simce-2022',
+      //   title: "Análisis de Resultados SIMCE 2022",
+      //   description: "Evaluación detallada de los resultados del SIMCE 2022 con recomendaciones para el sistema educativo.",
+      //   url: "/documentos/analisis/analisis-resultados-simce-2022.pdf",
+      //   fecha: "10/06/2023",
+      //   categoria: 'analisis',
+      //   type: 'pdf',
+      //   // directUrl: "/documentos/analisis/analisis-resultados-simce-2022.pdf"
+      // },
+      // {
+      //   id: 'autoridad-docente',
+      //   title: "La Autoridad Docente en el Siglo XXI",
+      //   description: "Análisis sobre el rol del docente y su autoridad pedagógica en el contexto educativo actual.",
+      //   url: "/documentos/analisis/autoridad-docente-2023.pdf",
+      //   fecha: "05/04/2023",
+      //   categoria: 'analisis',
+      //   type: 'pdf',
+      //   // directUrl: "/documentos/analisis/autoridad-docente-2023.pdf"
+      // },
+      // {
+      //   id: 'bases-constitucion',
+      //   title: "Bases para una Educación Inclusiva",
+      //   description: "Propuestas para garantizar una educación inclusiva y de calidad en la nueva Constitución.",
+      //   url: "/documentos/analisis/bases-educacion-inclusiva-2023.pdf",
+      //   fecha: "20/04/2023",
+      //   categoria: 'analisis',
+      //   type: 'pdf',
+      //   // directUrl: "/documentos/analisis/bases-educacion-inclusiva-2023.pdf"
+      // }
     ]
   },
   declaraciones: {
@@ -79,12 +79,12 @@ const documentosPorCategoria: Record<Categoria, { titulo: string; documentos: Do
         id: 'declaracion-estatutos',
         title: "Estatutos de la Asociación",
         description: "Documento oficial con los estatutos actualizados de ASEDUCH A.G.",
-        url: "/documentos/declaraciones/estatutos-aseduch-2022.pdf",
+        url: "/react/assets/declaraciones/Estatutos-ASEDUCH_7abr2022.pdf",
         fecha: "07/04/2022",
         categoria: 'declaraciones',
         destacado: true,
         type: 'pdf',
-        directUrl: "/documentos/declaraciones/estatutos-aseduch-2022.pdf"
+        directUrl: "/assets/declaraciones/Estatutos-ASEDUCH_7abri2022.pdf"
       },
       {
         id: 'toma-liceos',
@@ -94,7 +94,7 @@ const documentosPorCategoria: Record<Categoria, { titulo: string; documentos: Do
         fecha: "15/07/2023",
         categoria: 'declaraciones',
         type: 'pdf',
-        directUrl: "/documentos/declaraciones/posicion-toma-liceos-2023.pdf"
+        directUrl: "/assets/declaraciones/posicion-toma-liceos-2023.pdf"
       },
       {
         id: 'crisis-educativa',
@@ -104,7 +104,7 @@ const documentosPorCategoria: Record<Categoria, { titulo: string; documentos: Do
         fecha: "10/05/2023",
         categoria: 'declaraciones',
         type: 'pdf',
-        directUrl: "/documentos/declaraciones/declaracion-crisis-educativa-2023.pdf"
+        directUrl: "/assets/declaraciones/declaracion-crisis-educativa-2023.pdf"
       },
       {
         id: 'reforma-educacional',
@@ -114,7 +114,7 @@ const documentosPorCategoria: Record<Categoria, { titulo: string; documentos: Do
         fecha: "22/03/2023",
         categoria: 'declaraciones',
         type: 'pdf',
-        directUrl: "/documentos/declaraciones/posicion-reforma-educacional-2023.pdf"
+        directUrl: "/assets/declaraciones/posicion-reforma-educacional-2023.pdf"
       },
       {
         id: 'propuesta-educacion-2023',
@@ -124,7 +124,7 @@ const documentosPorCategoria: Record<Categoria, { titulo: string; documentos: Do
         fecha: "22/03/2023",
         categoria: 'declaraciones',
         type: 'pdf',
-        directUrl: "/documentos/declaraciones/propuesta-educacion-2023.pdf"
+        directUrl: "/assets/declaraciones/propuesta-educacion-2023.pdf"
       }
     ]
   }

@@ -16,7 +16,6 @@ const Partners  = lazy(() => import("./pages/partner/Partners"));
 const News      = lazy(() => import("./pages/news/News"));
 const DetailNews = lazy(() => import("./pages/news/DetailNews"));
 const Foundation = lazy(() => import("./pages/foundation/Foundation"));
-const DocumentViewer = lazy(() => import("./pages/documents/DocumentViewer"));
 
 // Fallback sencillo para Suspense
 function Loader() {
@@ -48,7 +47,6 @@ export default function App() {
           <Route path="/react/news/:id" element={<DetailNews />} />
           <Route path="/react/media" element={<MediaSection />}/>
           <Route path="/react/foundation" element={<Foundation />}/>
-          <Route path="/documento/:documentUrl*" element={<DocumentViewer />} />
           <Route path="*" element={<NotFound />} />
 
         </Routes>
