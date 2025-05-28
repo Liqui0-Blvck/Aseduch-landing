@@ -14,8 +14,6 @@ export default function Socios() {
       />
       <section className="bg-white text-gray-800 py-20 space-y-24">
         <InscriptionRequeriment />
-
-        <CTAP />
       </section>
     </>
   );
