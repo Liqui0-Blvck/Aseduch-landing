@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { motion, type Variants } from "framer-motion";
 
-import { FaPodcast, FaVideo, FaBroadcastTower } from "react-icons/fa";
-// import PrensaApiFeed from "./PrensaApiFeed";
-type MediaType = "radio" | "videos" | "podcasts";
+import { FaPodcast, FaVideo, FaBroadcastTower, FaRegNewspaper } from "react-icons/fa";
+import PrensaFiles from "./PrensaFiles";
+type MediaType = "radio" | "videos" | "podcasts" | "prensa";
 
 /* Esta interfaz define la estructura de cada elemento multimedia.
    - Para videos de YouTube, guardamos solo el ID del video en la URL
@@ -42,6 +42,30 @@ const videoUrls: MediaItem[] = [
     url: "WbsnSiJhMpI",
     start: 2,  // El video empezará en el segundo 2
   },
+  {
+    id: 3,
+    title: "Entrevista Radio Agricultura",
+    url: "q31mNHTXgbM",
+    start: 2
+  },
+  {
+    id: 4,
+    title: "Entrevista A José Luis Velasco",
+    url: "JwtO2U_xq7E",
+    start: 2
+  },
+  {
+    id: 5,
+    title: "Por que ASEDUCH es una alternativa al colegio de profesores",
+    url: "fGYlOJzIfd4",
+    start: 2
+  },
+  {
+    id: 6,
+    title: "ASEDUCH y la suspensión de clases por las elecciones 2024",
+    url: "7AORg6Achhs",
+    start: 2
+  }
 ];
 
 const podcasts: MediaItem[] = [
@@ -52,6 +76,7 @@ const tabs: { label: string; key: MediaType; icon: React.ReactNode }[] = [
   { label: "Radio", key: "radio", icon: <FaBroadcastTower /> },
   { label: "Videos", key: "videos", icon: <FaVideo /> },
   { label: "Podcasts", key: "podcasts", icon: <FaPodcast /> },
+  { label: "Prensa", key: "prensa", icon: <FaRegNewspaper /> },
 ];
 
 
@@ -120,9 +145,6 @@ export default function MediaSection() {
 
         {/* Contenido por tab */}
         <div>
-          {/* {activeTab === "prensa" && (
-            <PrensaApiFeed />
-          )} */}
           {activeTab === "radio" && (
             <div className="grid md:grid-cols-2 gap-8">
               {items.map((item) => (
@@ -170,6 +192,9 @@ export default function MediaSection() {
                 </div>
               ))}
             </div>
+          )}
+          {activeTab === "prensa" && (
+            <PrensaFiles />
           )}
         </div>
       </div>

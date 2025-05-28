@@ -56,18 +56,18 @@ export default function HeroSection() {
 
         {/* Imagen animada */}
         <div
-          className="w-full lg:w-1/2 flex justify-center"
+          className="w-full lg:w-4xl  flex justify-center"
         >
           <div className="relative w-full max-w-2xl aspect-[16/10] bg-gray-100 rounded-3xl overflow-hidden shadow-2xl flex items-center justify-center border-4 border-white">
             <img
               loading="lazy"
               src={aseduch_grupo}
-              alt='Equipo directivo de ASEDUCH'
+              alt='Equipo fundador de ASEDUCH'
               className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent flex items-end p-6">
               <div className="text-white">
-                <p className="text-sm font-medium">Equipo Directivo</p>
+                <p className="text-sm font-medium">Fundadores</p>
                 <h3 className="text-xl font-bold">Asociación de Educadores de Chile A.G.</h3>
               </div>
             </div>

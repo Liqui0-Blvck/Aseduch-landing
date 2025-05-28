@@ -47,6 +47,8 @@ export default function PrensaApiFeed() {
   if (error) return <div className="text-center py-10 text-red-500">{error}</div>;
 
 
+  console.log("Hola soy la prensa",prensa)
+
   return (
     <div className="grid md:grid-cols-2 gap-8">
       {prensa.map((item) => (

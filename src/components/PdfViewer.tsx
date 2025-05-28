@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import { Worker, Viewer, SpecialZoomLevel } from '@react-pdf-viewer/core';
 import { defaultLayoutPlugin } from '@react-pdf-viewer/default-layout';
 import { Spinner } from './Spinner';
@@ -11,8 +11,6 @@ interface PdfViewerProps {
   fileUrl: string;
   onClose: () => void;
 }
-
-
 
 export function PdfViewer({ fileUrl, onClose }: PdfViewerProps) {
   const [isLoading, setIsLoading] = useState(true);
@@ -31,7 +29,11 @@ export function PdfViewer({ fileUrl, onClose }: PdfViewerProps) {
     }
   };
 
-  const pdfUrl = getPdfUrl(fileUrl);
+  // Usar useMemo para mantener una URL estable y evitar bucles infinitos
+  const pdfUrl = useMemo(() => {
+    return `${getPdfUrl(fileUrl)}?t=${new Date().getTime()}`;
+  }, [fileUrl]);
+
 
   // Handle PDF loading state
   const handleDocumentLoadSuccess = () => {

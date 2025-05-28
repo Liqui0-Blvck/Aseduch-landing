@@ -10,6 +10,9 @@ export default defineConfig({
     react(),
     tailwindcss()
   ],
+  build: {
+    outDir: 'build'
+  },
   test: {
     globals: true,
     environment: 'jsdom',

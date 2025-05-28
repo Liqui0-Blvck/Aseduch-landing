@@ -53,5 +53,16 @@ lerna-debug.log*
 .tmp/
 .temp/
 
-# Exclude public directory
+# Assets and public files
 /public/
+/src/assets/
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.svg
+*.webp
+*.mp4
+*.webm
+*.pdf
+*.ico

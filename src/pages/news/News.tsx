@@ -53,8 +53,8 @@ export default function News() {
   return (
     <>
       <Seo
-        title="Noticias | ASEDUCH"
-        description="Mantente informado con las últimas noticias, eventos y comunicados de ASEDUCH."
+        title="Actividades | ASEDUCH"
+        description="Descubre las últimas novedades, eventos y comunicados de ASEDUCH, y mantente informado sobre nuestras actividades y logros."
         url="https://aseduch.cl/react/news"
       />
 
@@ -62,9 +62,9 @@ export default function News() {
         <div className="max-w-7xl mx-auto px-6 space-y-6">
           {/* Header */}
           <div className="text-center space-y-2">
-            <h2 className="text-3xl font-bold text-[#1E3A5F]">Noticias</h2>
+            <h2 className="text-3xl font-bold text-[#1E3A5F]">Actividades</h2>
             <p className="text-gray-600">
-              Mantente al día con las últimas novedades y comunicados de ASEDUCH.
+              Descubre las últimas novedades, eventos y comunicados de ASEDUCH, y mantente informado sobre nuestras actividades y logros.
             </p>
           </div>
 

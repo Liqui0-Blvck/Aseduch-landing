@@ -8,11 +8,17 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "generate:sitemap": "tsx scripts/generate-sitemap.ts",
-    "build": "npm run generate:sitemap && vite build",
     "test": "vitest",
     "test:watch": "vitest watch",
     "test:coverage": "vitest run --coverage",
-    "test:ui": "vitest --ui"
+    "test:ui": "vitest --ui",
+    "build": "npm run generate:sitemap && vite build",
+    "prepostbuild": "rm -rf build && cp -r dist build",
+    "postbuild": "react-snap"
+  },
+  "reactSnap": {
+    "include": ["/react/", "/react/about", "/react/news", "/react/docs", "/react/partners"],
+    "puppeteerArgs": ["--no-sandbox"]
   },
   "dependencies": {
     "@react-pdf-viewer/core": "^3.12.0",
@@ -44,6 +50,7 @@
     "jsdom": "^26.1.0",
     "node-fetch": "^3.3.2",
     "postcss": "^8.5.3",
+    "react-snap": "^1.23.0",
     "sharp": "^0.34.1",
     "tailwindcss": "^4.1.7",
     "ts-node": "^10.9.2",
