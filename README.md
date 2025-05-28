@@ -1,29 +1,38 @@
-# Mi Proyecto React
+# ASEDUCH Landing Page
 
-Un proyecto moderno de React construido con Vite, TypeScript y TailwindCSS. Este proyecto incluye una integración con WordPress como backend para noticias y contenido dinámico.
+Sitio web oficial de la Asociación de Educadores de Chile (ASEDUCH), desarrollado con React, TypeScript y TailwindCSS. Este proyecto presenta la información institucional, noticias, recursos educativos y la fundación ASEDUCH.
 
-## Características
+## Sobre ASEDUCH
 
-- ⚡️ Vite para un desarrollo rápido y build optimizado
-- 🎯 TypeScript para tipado estático
-- 🎨 TailwindCSS para estilos modernos y responsivos
-- 🔄 Integración con WordPress API
-- 🗺️ Generación automática de sitemap
-- 🖼️ Lazy loading de imágenes
-- 🎭 Animaciones con Framer Motion
-- 📱 Diseño completamente responsive
-- 🔍 SEO optimizado
+La Asociación de Educadores de Chile (ASEDUCH) es una organización dedicada a apoyar y fortalecer la educación en Chile. El sitio web sirve como plataforma principal para comunicar sus iniciativas, compartir recursos educativos y conectar con la comunidad educativa.
 
-## Requisitos Previos
+## Características Principales
 
-- Node.js (versión 18 o superior)
-- npm o yarn
+- 🏢 **Información Institucional**: Presentación de la asociación, su misión, visión y equipo.
+- 📰 **Noticias y Actualidad**: Integración con WordPress para mostrar noticias y eventos relevantes.
+- 📚 **Recursos Educativos**: Biblioteca de documentos, guías y materiales para educadores.
+- 🤝 **Fundación ASEDUCH**: Sección dedicada a la fundación con:
+  - Documentos institucionales
+  - Actividades y eventos
+  - Opciones de donación y apoyo
+- 📱 **Diseño Responsive**: Experiencia óptima en todos los dispositivos.
+- 🎭 **Animaciones**: Implementadas con Framer Motion para una experiencia de usuario mejorada.
 
-## Instalación
+## Tecnologías
+
+- ⚛️ **React**: Biblioteca principal para la construcción de la interfaz.
+- 🎯 **TypeScript**: Para un desarrollo más seguro y mantenible.
+- 🎨 **TailwindCSS**: Framework CSS para un diseño rápido y consistente.
+- ⚡️ **Vite**: Herramienta de construcción para un desarrollo rápido.
+- 🔄 **WordPress API**: Integración para contenido dinámico.
+- 📄 **PDF Viewer**: Visualizador de documentos integrado.
+- 🔍 **SEO Optimizado**: Meta tags dinámicos y sitemap automático.
+
+## Instalación y Desarrollo
 
 ```bash
 # Clonar el repositorio
-git clone [url-del-repositorio]
+git clone https://github.com/Liqui0-Blvck/Aseduch-landing.git
 
 # Instalar dependencias
 npm install
@@ -35,54 +44,46 @@ npm run dev
 ## Scripts Disponibles
 
 - `npm run dev` - Inicia el servidor de desarrollo
-- `npm run build` - Genera el sitemap y construye la aplicación para producción
+- `npm run build` - Construye la aplicación para producción
 - `npm run preview` - Vista previa de la build de producción
 - `npm run lint` - Ejecuta el linter
-- `npm run generate:sitemap` - Genera el sitemap.xml
 
 ## Estructura del Proyecto
 
 ```
 ├── src/
-│   ├── assets/        # Imágenes y recursos estáticos
+│   ├── assets/        # Recursos estáticos
 │   ├── components/    # Componentes reutilizables
+│   │   └── PdfViewer.tsx  # Componente para visualizar PDFs
 │   ├── hooks/         # Custom hooks
 │   ├── pages/         # Componentes de páginas
+│   │   ├── foundation/  # Sección de la Fundación ASEDUCH
+│   │   ├── media/       # Sección de prensa y medios
+│   │   └── ...         # Otras secciones del sitio
 │   ├── types/         # Tipos de TypeScript
 │   ├── utils/         # Utilidades y helpers
 │   ├── App.tsx        # Componente principal
 │   └── main.tsx       # Punto de entrada
-├── scripts/
-│   └── generate-sitemap.ts  # Script de generación de sitemap
-├── public/            # Archivos públicos
+├── public/            # Archivos públicos (excluidos del control de versiones)
 └── [archivos de configuración]
 ```
 
-## Características Técnicas
+## Sección de Fundación
 
-### Integración con WordPress
+La sección de la Fundación ASEDUCH está estructurada en tres pestañas principales:
 
-El proyecto utiliza la WordPress REST API para obtener contenido dinámico, principalmente noticias y actualizaciones.
+1. **Documentos**: Acceso a documentos institucionales como estatutos y reportes.
+2. **Actividades**: Calendario de eventos, talleres y seminarios organizados por la fundación.
+3. **Donaciones**: Información sobre cómo apoyar a la fundación, incluyendo datos bancarios y opciones de pago.
 
-### SEO
-
-- Generación automática de sitemap.xml
-- Meta tags dinámicos
-- JSON-LD para rich snippets
-- Optimización de imágenes
-
-### Rendimiento
-
-- Lazy loading de imágenes y componentes
-- Optimización de assets con Vite
-- Estilos optimizados con TailwindCSS
+Cada sección cuenta con animaciones fluidas y una interfaz intuitiva para mejorar la experiencia del usuario.
 
 ## Contribuir
 
 1. Fork el proyecto
-2. Crea tu rama de feature (`git checkout -b feature/AmazingFeature`)
-3. Commit tus cambios (`git commit -m 'Add some AmazingFeature'`)
-4. Push a la rama (`git push origin feature/AmazingFeature`)
+2. Crea tu rama de feature (`git checkout -b feature/NuevaFuncionalidad`)
+3. Commit tus cambios (`git commit -m 'Agregar nueva funcionalidad'`)
+4. Push a la rama (`git push origin feature/NuevaFuncionalidad`)
 5. Abre un Pull Request
 
 ## Licencia
