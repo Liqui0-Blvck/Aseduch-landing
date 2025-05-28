@@ -16,6 +16,8 @@ const Partners  = lazy(() => import("./pages/partner/Partners"));
 const News      = lazy(() => import("./pages/news/News"));
 const DetailNews = lazy(() => import("./pages/news/DetailNews"));
 const Foundation = lazy(() => import("./pages/foundation/Foundation"));
+const FoundationActivities = lazy(() => import("./pages/foundation/components/FoundationActivities"));
+const FoundationDonations = lazy(() => import("./pages/foundation/components/DonationInfo"));
 const VisionMision = lazy(() => import("./pages/about/components/OurVisionMision"));
 const Values     = lazy(() => import("./pages/about/components/OurValues"));
 const Directive  = lazy(() => import("./pages/about/components/OurDirective"));
@@ -56,6 +58,8 @@ export default function App() {
           <Route path="/react/media" element={<MediaSection />} />
           <Route path="/react/media/press-media/:id" element={<DetailNews />} />
           <Route path="/react/foundation" element={<Foundation />} />
+          <Route path="/react/foundation/activities" element={<FoundationActivities activities={[]} />} />
+          <Route path="/react/foundation/donations" element={<FoundationDonations />} />
           <Route path="/react/about" element={<About />} />
           <Route path="/react/about/vision-mision" element={<VisionMision />} />
           <Route path="/react/about/values" element={<Values />} />

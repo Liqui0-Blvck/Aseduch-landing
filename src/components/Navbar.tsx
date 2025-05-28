@@ -56,7 +56,15 @@ export default function Navbar() {
     },
     { to: "/react/news", label: "Actividades" },
     { to: "/react/media", label: "Medios" },
-    { to: "/react/foundation", label: "Fundación" }
+    {
+      label: "Fundación",
+      to: "/react/foundation",
+      dropdown: [
+        { to: "/react/foundation", label: "Documentos" },
+        { to: "/react/foundation/activities", label: "Actividades" },
+        { to: "/react/foundation/donations", label: "Donaciones" }
+      ]
+    }
   ];
 
   return (
@@ -69,14 +77,14 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
           {/* Logo */}
           <div className="flex items-center space-x-4">
-            <img src={location.pathname === '/react/foundation' ? logo_fundacion : logo} alt="ASEDUCH Logo" className={location.pathname === '/react/foundation' ? 'w-22 h-22' : 'h-16'} />
+            <img src={location.pathname === '/react/foundation' ? logo_fundacion : logo} alt="ASEDUCH Logo" className="w-22 h-22" />
             {/* <img src={logoFundacion} alt="Fundación ASEDUCH" className="h-14" /> */}
             <div className="hidden md:block">
               <div className="text-lg font-bold text-gray-800">
                 {location.pathname === '/react/foundation' ? 'Fundación ASEDUCH' : 'ASEDUCH'}
               </div>
               <div className="text-xs text-gray-600">
-                {location.pathname === '/react/foundation' ? 'Fundación de Educación en Chile' : 'Asociación de Educadores de Chile A.G.'}
+                {location.pathname === '/react/foundation' ? 'Fundación de Educadores de Chile' : 'Asociación de Educadores de Chile A.G.'}
               </div>
             </div>
           </div>
