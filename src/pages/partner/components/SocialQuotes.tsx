@@ -29,18 +29,18 @@ const SocialQuotes = () => {
   
 
   const bankDetails = {
-      title: 'Datos Bancarios',
-      description: 'Realiza tu pago mediante transferencia bancaria',
-      icon: <FaUniversity className="w-8 h-8 text-blue-600" />,
-      details: [
-        'Banco: Banco de Chile',
-        'Tipo de cuenta: Cuenta Corriente',
-        'N° de cuenta: 12345678',
-        'RUT: 12.345.678-9',
-        'Email: tesoreria@aseduch.cl',
-        'Asunto: Pago de cuota socio',
-      ]
-  }
+    title: 'Datos Bancarios',
+    description: 'Realiza tu pago mediante transferencia bancaria',
+    icon: <FaUniversity className="w-8 h-8 text-blue-600" />,
+    details: [
+      'Banco: Scotiabank',
+      'Tipo de cuenta: Cuenta Corriente',
+      'N° de cuenta: 985911223',
+      'RUT: 65.222.536-5',
+      'Email: tesoreria@aseduch.cl',
+      'Asunto: Pago de cuota socio',
+    ]
+  };
 
   return (
     <>

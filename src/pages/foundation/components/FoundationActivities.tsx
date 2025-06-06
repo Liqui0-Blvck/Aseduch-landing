@@ -1,6 +1,8 @@
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Seo } from '../../../components/Seo';
 import { FaCalendarAlt, FaMapMarkerAlt, FaExternalLinkAlt } from 'react-icons/fa';
+import { PdfViewer } from '../../../components/PdfViewer';
 
 interface Activity {
   id: number;
@@ -10,38 +12,43 @@ interface Activity {
   image: string;
   url: string;
   location?: string;
+  file?: string;
 }
+
+
 
 interface FoundationActivitiesProps {
   activities: Activity[];
 }
 
 // Datos de ejemplo para mostrar cuando no hay actividades reales
+// Actividades reales de la Fundación
 const sampleActivities: Activity[] = [
   {
     id: 1,
-    title: 'Seminario: Innovación Educativa 2025',
-    date: '15 de Junio, 2025 - 09:00 hrs',
-    location: 'Centro Cultural de Santiago',
-    description: 'Expertos nacionales e internacionales compartirán experiencias y estrategias innovadoras para transformar la educación en Chile.',
+    title: 'Seminario O\'Higgins: Bienestar Emocional y Salud Mental Docente',
+    date: 'Julio, 2025',
+    location: 'Región de O\'Higgins',
+    description: 'En colaboración con la fundación Teen Star, este seminario proporciona a los docentes las herramientas y estrategias necesarias para promover y mantener su salud mental en el entorno educativo. Poniendo especial énfasis en técnicas de autocuidado que sean aplicables a la realidad de los miembros de la comunidad educativa.',
     image: 'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
     url: '#'
   },
   {
     id: 2,
-    title: 'Taller: Herramientas Digitales para Docentes',
-    date: '28 de Junio, 2025 - 15:30 hrs',
-    location: 'Modalidad Online',
-    description: 'Aprende a utilizar las últimas herramientas tecnológicas para potenciar tus clases y mejorar la experiencia de aprendizaje de tus estudiantes.',
+    title: 'Seminario O\'Higgins: Capacitación para docentes que trabajan con estudiantes TEA',
+    date: 'Julio, 2025',
+    location: 'Región de O\'Higgins',
+    description: 'Entregaremos herramientas inclusivas y prácticas para fortalecer la labor docente en el aula con estudiantes con Trastorno del Espectro Autista (TEA).',
     image: 'https://images.unsplash.com/photo-1571260899304-425eee4c7efc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-    url: '#'
+    url: '#',
+    file: '/react/assets/fundacion/seminario_ASEDUCH__TEEN_STAR.pdf'
   },
   {
     id: 3,
-    title: 'Conferencia: Educación Inclusiva y Diversidad',
-    date: '10 de Julio, 2025 - 10:00 hrs',
-    location: 'Auditorio Universidad de Chile',
-    description: 'Analizaremos estrategias efectivas para crear ambientes educativos inclusivos que respeten y celebren la diversidad en todas sus formas.',
+    title: 'Seminario Temuco 2025',
+    date: 'Agosto, 2025',
+    location: 'Temuco',
+    description: 'Próximamente más información sobre este importante evento para la comunidad educativa de la región de La Araucanía.',
     image: 'https://images.unsplash.com/photo-1577896851231-70ef18881754?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
     url: '#'
   }
@@ -69,7 +76,14 @@ const itemVariants = {
 export default function FoundationActivities({ activities }: FoundationActivitiesProps) {
   // Si no hay actividades proporcionadas, usar las de ejemplo
   const displayActivities = activities.length > 0 ? activities : sampleActivities;
-  
+
+  // Estado para PDFViewer
+  const [selectedPdf, setSelectedPdf] = useState<string | null>(null);
+  const handleViewPdf = (file?: string) => {
+    if (file) setSelectedPdf(file);
+  };
+  const handleClosePdf = () => setSelectedPdf(null);
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-white to-gray-50">
       <Seo 
@@ -138,18 +152,25 @@ export default function FoundationActivities({ activities }: FoundationActivitie
                     
                     <p className="text-base text-gray-700 mb-4 flex-grow">{activity.description}</p>
                     
-                    {activity.url && (
-                      <div className="mt-auto">
-                        <a 
-                          href={activity.url} 
-                          target="_blank" 
-                          rel="noopener noreferrer" 
-                          className="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors text-sm font-medium"
-                        >
-                          Más información <FaExternalLinkAlt className="ml-2" />
-                        </a>
-                      </div>
-                    )}
+                    <div className="mt-auto">
+  {/* {activity.file ? (
+    <button
+      onClick={() => handleViewPdf(activity.file)}
+      className="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors text-sm font-medium"
+    >
+      Ver más <FaExternalLinkAlt className="ml-2" />
+    </button>
+  ) : (
+    <a
+      href={activity.url}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors text-sm font-medium"
+    >
+      Más información <FaExternalLinkAlt className="ml-2" />
+    </a>
+  )} */}
+</div>
                   </div>
                 </div>
               </motion.div>
@@ -168,6 +189,21 @@ export default function FoundationActivities({ activities }: FoundationActivitie
           </div>
         </section>
       </main>
+      {/* PDFViewer Modal */}
+      {selectedPdf && (
+        <div className="fixed inset-0 z-50 bg-black bg-opacity-60 flex items-center justify-center">
+          <div className="relative w-full max-w-4xl max-h-[90vh] bg-white rounded-xl shadow-2xl overflow-hidden">
+            <PdfViewer fileUrl={selectedPdf} onClose={handleClosePdf} />
+            <button
+              onClick={handleClosePdf}
+              className="absolute top-2 right-2 bg-white rounded-full shadow p-2 hover:bg-gray-100"
+              aria-label="Cerrar visor PDF"
+            >
+              ✕
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

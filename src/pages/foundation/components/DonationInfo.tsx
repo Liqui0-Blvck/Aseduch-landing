@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Seo } from '../../../components/Seo';
-import { FaUniversity, FaCreditCard, FaRegCopy, FaCheck, FaInfoCircle } from 'react-icons/fa';
+import { FaUniversity, FaCheck, FaInfoCircle } from 'react-icons/fa';
 
 const donationOptions = [
   {
@@ -9,24 +9,13 @@ const donationOptions = [
     icon: <FaUniversity className="w-6 h-6" />,
     description: 'Realiza tu donación directamente a nuestra cuenta bancaria',
     details: [
-      'Banco: Banco de Chile',
+      'Banco: Scotiabank',
       'Tipo de cuenta: Cuenta Corriente',
-      'N° de cuenta: 98765432',
-      'RUT: 12.345.678-9',
-      'Email: donaciones@aseduch.cl'
+      'N° de cuenta: 985911223',
+      'RUT: 65.222.536-5',
+      'Email: contacto@aseduch.cl'
     ]
   },
-  {
-    id: 2,
-    title: 'Plataformas de Pago',
-    icon: <FaCreditCard className="w-6 h-6" />,
-    description: 'Dona de forma segura con tarjeta de crédito o débito',
-    platforms: [
-      { name: 'Webpay', url: '#' },
-      { name: 'PayPal', url: '#' },
-      { name: 'Mercado Pago', url: '#' }
-    ]
-  }
 ];
 
 const containerVariants = {
@@ -49,10 +38,6 @@ const itemVariants = {
 };
 
 export default function DonationInfo() {
-  const copyToClipboard = (text: string) => {
-    navigator.clipboard.writeText(text);
-    // En una aplicación real, aquí mostraríamos una notificación de éxito
-  };
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-white to-gray-50">
@@ -85,11 +70,11 @@ export default function DonationInfo() {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 gap-8 mb-8">
+          <div className="flex gap-8 mb-8">
             {donationOptions.map(option => (
               <motion.div 
                 key={option.id} 
-                className="bg-gradient-to-br from-blue-50 to-white border border-blue-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow"
+                className="bg-gradient-to-br from-blue-50 to-white border border-blue-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow w-full"
                 variants={itemVariants}
               >
                 <div className="flex items-center mb-4">
@@ -111,34 +96,11 @@ export default function DonationInfo() {
                             <span className="text-gray-700 font-medium">{label}:</span>
                             <div className="flex items-center">
                               <span className="text-blue-900 font-semibold mr-2">{value}</span>
-                              {value && (
-                                <button 
-                                  onClick={() => copyToClipboard(value)}
-                                  className="text-blue-600 hover:text-blue-800 focus:outline-none"
-                                  title="Copiar al portapapeles"
-                                >
-                                  <FaRegCopy />
-                                </button>
-                              )}
                             </div>
                           </li>
                         );
                       })}
                     </ul>
-                  </div>
-                )}
-                
-                {option.platforms && (
-                  <div className="flex flex-wrap gap-3 mt-6">
-                    {option.platforms.map(platform => (
-                      <button
-                        key={platform.name}
-                        className="flex items-center gap-2 bg-blue-600 text-white px-5 py-2 rounded-md text-sm font-medium hover:bg-blue-700 transition-colors disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:bg-blue-600"
-                        disabled
-                      >
-                        {platform.name}
-                      </button>
-                    ))}
                   </div>
                 )}
               </motion.div>
@@ -182,7 +144,7 @@ export default function DonationInfo() {
           >
             <h3 className="text-lg font-semibold text-blue-800 mb-2">¿Necesitas factura por tu donación?</h3>
             <p className="text-blue-700 mb-2">
-              Escríbenos a <a href="mailto:contabilidad@aseduch.cl" className="underline font-medium hover:text-blue-900 transition-colors">contabilidad@aseduch.cl</a> con los datos de tu donación y te enviaremos la factura correspondiente.
+              Escríbenos a <a href="mailto:contacto@aseduch.cl" className="underline font-medium hover:text-blue-900 transition-colors">contacto@aseduch.cl</a> con los datos de tu donación y te enviaremos la factura correspondiente.
             </p>
             <p className="text-sm text-blue-600">Las donaciones son deducibles de impuestos según la Ley de Donaciones con Fines Sociales.</p>
           </motion.div>

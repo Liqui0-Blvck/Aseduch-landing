@@ -21,7 +21,7 @@ const FoundationDonations = lazy(() => import("./pages/foundation/components/Don
 const VisionMision = lazy(() => import("./pages/about/components/OurVisionMision"));
 const Values     = lazy(() => import("./pages/about/components/OurValues"));
 const Directive  = lazy(() => import("./pages/about/components/OurDirective"));
-const SocialQuote = lazy(() => import("./pages/partner/components/SocialQuotes"));
+// const SocialQuote = lazy(() => import("./pages/partner/components/SocialQuotes"));
 const Rights = lazy(() => import("./pages/partner/components/Rights"));
 const Advices = lazy(() => import("./pages/partner/components/Advices"));
 const Benefits = lazy(() => import("./pages/partner/components/Benefits"));
@@ -67,7 +67,7 @@ export default function App() {
           <Route path="/react/partners" element={<Partners />} />
           <Route path="/react/partners/advices" element={<Advices />} />
           <Route path="/react/partners/rights" element={<Rights />} />
-          <Route path="/react/partners/social-quotes" element={<SocialQuote />} />
+          {/* <Route path="/react/partners/social-quotes" element={<SocialQuote />} /> */}
           <Route path="/react/partners/benefits" element={<Benefits />} />
           <Route path="*" element={<NotFound />} />
 

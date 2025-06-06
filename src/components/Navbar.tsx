@@ -48,7 +48,7 @@ export default function Navbar() {
       to: "/react/partners",
       dropdown: [
         { to: "/react/partners", label: "Hazte socio" },
-        { to: "/react/partners/social-quotes", label: "Cuotas sociales" },
+        // { to: "/react/partners/social-quotes", label: "Cuotas sociales" },
         { to: "/react/partners/benefits", label: "Beneficios" },
         { to: "/react/partners/rights", label: "Derechos y obligaciones" },
         { to: "/react/partners/advices", label: "Asesoría" }
@@ -75,13 +75,11 @@ export default function Navbar() {
         }`}
       >
         <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-          {/* Logo */}
           <div className="flex items-center space-x-4">
-            <img src={location.pathname === '/react/foundation' ? logo_fundacion : logo} alt="ASEDUCH Logo" className="w-22 h-22" />
-            {/* <img src={logoFundacion} alt="Fundación ASEDUCH" className="h-14" /> */}
-            <div className="hidden md:block">
+            <img src={location.pathname.includes('/react/foundation') ? logo_fundacion : logo} alt="ASEDUCH Logo" className="w-22 h-22" />
+            <div className="hidden lg:block">
               <div className="text-lg font-bold text-gray-800">
-                {location.pathname === '/react/foundation' ? 'Fundación ASEDUCH' : 'ASEDUCH'}
+                {location.pathname.includes('/react/foundation') ? 'Fundación ASEDUCH' : 'ASEDUCH'}
               </div>
               <div className="text-xs text-gray-600">
                 {location.pathname === '/react/foundation' ? 'Fundación de Educadores de Chile' : 'Asociación de Educadores de Chile A.G.'}
@@ -148,7 +146,7 @@ export default function Navbar() {
           </nav>
 
           {/* Social Media Links */}
-          <div className="hidden md:flex space-x-4">
+          <div className="hidden lg:flex space-x-4">
             <a href="https://facebook.com/Aseduch/" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-blue-600 transition" aria-label="Facebook">
               <FaFacebook size={20} />
             </a>
@@ -158,7 +156,7 @@ export default function Navbar() {
             <a href="https://instagram.com/aseduch_/?hl=es" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-pink-600 transition" aria-label="Instagram">
               <FaInstagram size={20} />
             </a>
-            <a href="https://youtube.com/UCSmp_0yZJG5On1kC1-mqbjw/videos" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-red-600 transition" aria-label="YouTube">
+            <a href="https://youtube.com/@Aseduch" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-red-600 transition" aria-label="YouTube">
               <FaYoutube size={20} />
             </a>
             <a href="https://www.linkedin.com/company/asociación-de-educadores-de-chile/" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-blue-600 transition" aria-label="LinkedIn">
@@ -169,7 +167,7 @@ export default function Navbar() {
           {/* Mobile Hamburger */}
           <div className="flex items-center md:hidden">
             <div className="text-sm font-bold text-gray-800 mr-4">
-              ASEDUCH
+              {location.pathname.includes('/react/foundation') ? 'Fundación ASEDUCH' : 'ASEDUCH'}
             </div>
             <button
               onClick={() => setMobileOpen((o) => !o)}
@@ -191,14 +189,13 @@ export default function Navbar() {
       />
 
       <aside
-        className={`fixed top-0 left-0 h-full w-64 bg-white z-50 transform transition-transform ${
+        className={`fixed top-0 left-0 h-full w-64 bg-white z-50 transform transition-transform overflow-y-auto ${
           mobileOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
-        <div className="px-6 py-4 flex items-center justify-between border-b border-zinc-300">
+        <div className="sticky top-0 px-6 py-4 flex items-center justify-between border-b border-zinc-300 bg-white">
           <div className="flex items-center space-x-3">
-            <img src={logo} alt="ASEDUCH Logo" className="h-12" />
-            {/* <img src={logoFundacion} alt="Fundación ASEDUCH" className="h-10" /> */}
+            <img src={location.pathname.includes('/react/foundation') ? logo_fundacion : logo} alt="ASEDUCH Logo" className="h-12" />
           </div>
           <button
             onClick={() => setMobileOpen(false)}
@@ -208,24 +205,29 @@ export default function Navbar() {
             <HiX size={24} />
           </button>
         </div>
-        <nav className="mt-6 flex flex-col space-y-4 px-6">
+        <nav className="mt-6 flex flex-col space-y-4 px-6 pb-20">
           {links.map((link) =>
             link.dropdown ? (
               <div key={link.label} className="">
-                <div className="font-semibold text-gray-800 mb-1">{link.label}</div>
-                <ul className="ml-2 mb-4">
-                  {link.dropdown.map((sublink) => (
-                    <li key={sublink.to}>
-                      <Link
-                        to={sublink.to}
-                        onClick={() => setMobileOpen(false)}
-                        className="block text-base py-1 px-2 rounded hover:bg-blue-50 hover:text-blue-600 transition"
-                      >
-                        {sublink.label}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
+                <details className="group">
+                  <summary className="font-semibold text-gray-800 mb-1 cursor-pointer flex items-center justify-between">
+                    {link.label}
+                    <svg className="w-5 h-5 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" /></svg>
+                  </summary>
+                  <ul className="ml-2 mb-4 mt-2">
+                    {link.dropdown.map((sublink) => (
+                      <li key={sublink.to}>
+                        <Link
+                          to={sublink.to}
+                          onClick={() => setMobileOpen(false)}
+                          className="block text-base py-1 px-2 rounded hover:bg-blue-50 hover:text-blue-600 transition"
+                        >
+                          {sublink.label}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </details>
               </div>
             ) : (
               <Link
@@ -252,7 +254,7 @@ export default function Navbar() {
             <a href="https://instagram.com/aseduch_/?hl=es" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-pink-600 transition" aria-label="Instagram">
               <FaInstagram size={24} />
             </a>
-            <a href="https://youtube.com/UCSmp_0yZJG5On1kC1-mqbjw/videos" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-red-600 transition" aria-label="YouTube">
+            <a href="https://youtube.com/@Aseduch" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-red-600 transition" aria-label="YouTube">
               <FaYoutube size={24} />
             </a>
             <a href="https://www.linkedin.com/company/asociación-de-educadores-de-chile/" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-blue-600 transition" aria-label="LinkedIn">

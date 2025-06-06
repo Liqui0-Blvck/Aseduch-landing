@@ -8,8 +8,18 @@ import andes from '../../../assets/Logo_uandes.png'
 import san_sebastian from '../../../assets/san_sebastian.png'
 import el_desarrollo from '../../../assets/el_desarrollo_u.png'
 import andres_bello from '../../../assets/andres_bellos.png'
+import ucentral from '../../../assets/u_central.png'
 
 const benefits = [
+  {
+    name: "Universidad Central de Chile",
+    logo: ucentral,
+    perks: [
+      "30% de descuento en el arancel de Diplomados, Postítulos y Cursos de Educación Continua (Online, Semipresencial y Presencial) para socios ASEDUCH, cónyuges e hijos.",
+      "100% de descuento en la matrícula si se inscriben 5 o más socios en un mismo programa (cumpliendo el mínimo requerido).",
+      "Cupo máximo de 20 becas por trimestre, asignadas por orden de postulación y requisitos.",
+    ],
+  },
   {
     name: "Universidad San Sebastián",
     logo: san_sebastian,

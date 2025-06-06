@@ -4,7 +4,7 @@ import { useLocation } from "react-router-dom";
 import { FaFacebook, FaInstagram, FaYoutube, FaLinkedin, FaMapMarkerAlt, FaPhone, FaEnvelope } from "react-icons/fa";
 import { FaX } from "react-icons/fa6";
 import logo from "../assets/aseduch-logo.jpg";
-import logo_fundacion from "../assets/logo-fundacion-celeste (1).png";
+import logo_fundacion from "../assets/logo-fundacion-celeste.png"
 
 export default function Footer() {
   const location = useLocation();
@@ -51,7 +51,7 @@ export default function Footer() {
             <a href="https://instagram.com/aseduch_/?hl=es" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-pink-600 transition" aria-label="Instagram">
               <FaInstagram size={18} />
             </a>
-            <a href="https://youtube.com/UCSmp_0yZJG5On1kC1-mqbjw/videos" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-red-600 transition" aria-label="YouTube">
+            <a href="https://youtube.com/@Aseduch" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-red-600 transition" aria-label="YouTube">
               <FaYoutube size={18} />
             </a>
             <a href="https://www.linkedin.com/company/asociación-de-educadores-de-chile/" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-blue-600 transition" aria-label="LinkedIn">

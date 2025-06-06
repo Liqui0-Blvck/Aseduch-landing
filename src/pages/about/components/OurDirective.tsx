@@ -14,7 +14,7 @@ const OurDirective = () => {
         src: denise_ibarboure,
         alt: "Denise Ibarboure C",
         title: "Denise Ibarboure C",
-        position: "Secretaria Ejecutiva",
+        position: "Vicepresidente",
         description:
           "Profesora de Educación Física Universidad Católica de Valparaíso. Magíster en Dirección de Centros Educativos Universidad Villanueva, Madrid.",
       },
@@ -23,7 +23,7 @@ const OurDirective = () => {
         src: james,
         alt: "James Edward Tucker",
         title: "James Edward Tucker",
-        position: "Secretario Ejecutivo",
+        position: "Director",
         description:
           "Profesor Británico y miembro de redes Teach for All y Heads Forward. Magíster en Filosofía y Literatura y en Gestión de Políticas Públicas por la Universidad de Londres. Director Ejecutivo en Chartwell International School, Vitacura.",
       },
@@ -32,7 +32,7 @@ const OurDirective = () => {
         src: tamara_constanzo,
         alt: "Tamara Constanzo Jara",
         title: "Tamara Constanzo Jara",
-        position: "Secretaria Ejecutiva",
+        position: "Tesorero",
         description:
           "Magíster en Gestión Estratégica y Liderazgo Educacional (UNAB). Profesora de Educación Básica (UANDES). Ex coordinadora nacional del programa Escuelas Arriba y Jefa Provincial de Educación Santiago Centro.",
       },
@@ -41,7 +41,7 @@ const OurDirective = () => {
         src: gaston_eduardo,
         alt: "Gastón Eduardo Díaz",
         title: "Gastón Eduardo Díaz Norambuena",
-        position: "Secretario Ejecutivo",
+        position: "Pro Secretario",
         description:
           "Profesor de Estado en Historia y Geografía. Licenciado en Ciencias Jurídicas y Sociales. Magíster en Ciencias Políticas con mención en Participación Democrática.",
       },

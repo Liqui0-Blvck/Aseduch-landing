@@ -6,6 +6,7 @@ import andes from '../../../assets/Logo_uandes.png';
 import san_sebastian from '../../../assets/san_sebastian.png';
 import el_desarrollo from '../../../assets/el_desarrollo_u.png';
 import andres_bello from '../../../assets/andres_bellos.png';
+import ucentral from '../../../assets/u_central.png';
 
 function useWindowSize() {
   const [width, setWidth] = useState(window.innerWidth);
@@ -28,6 +29,7 @@ export default function BrandsSection() {
     finis,
     andres_bello,
     el_desarrollo,
+    ucentral,
   ];
   const allLogos = [...logos, ...logos];
 
