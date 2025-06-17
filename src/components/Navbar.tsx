@@ -4,7 +4,7 @@ import { HiMenu, HiX } from "react-icons/hi";
 import { FaFacebook, FaInstagram, FaYoutube, FaLinkedin } from "react-icons/fa";
 import { FaX } from "react-icons/fa6";
 import logo from "../assets/aseduch-logo.jpg";
-import logo_fundacion from "../assets/logo-fundacion-celeste (1).png";
+import logo_fundacion from "../assets/logo_celeste.png";
 
 export default function Navbar() {
   const location = useLocation();
@@ -48,14 +48,14 @@ export default function Navbar() {
       to: "/react/partners",
       dropdown: [
         { to: "/react/partners", label: "Hazte socio" },
-        // { to: "/react/partners/social-quotes", label: "Cuotas sociales" },
-        { to: "/react/partners/benefits", label: "Beneficios" },
+        { to: "/react/partners/advices", label: "Asesoría Y Servicios" },
         { to: "/react/partners/rights", label: "Derechos y obligaciones" },
-        { to: "/react/partners/advices", label: "Asesoría" }
+        { to: "/react/partners/benefits", label: "Beneficios" },
+        { to: "/react/partners/social-quotes", label: "Paga Tu Cuota" },
       ]
     },
-    { to: "/react/news", label: "Actividades" },
-    { to: "/react/media", label: "Medios" },
+    { to: "/react/news", label: "Noticias" },
+    { to: "/react/media", label: "Comunicaciones" },
     {
       label: "Fundación",
       to: "/react/foundation",
@@ -74,15 +74,15 @@ export default function Navbar() {
           showNavbar ? "translate-y-0" : "-translate-y-full"
         }`}
       >
-        <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+        <div className="max-w-7xl mx-auto px-2 py-4 flex justify-between items-center">
           <div className="flex items-center space-x-4">
-            <img src={location.pathname.includes('/react/foundation') ? logo_fundacion : logo} alt="ASEDUCH Logo" className="w-22 h-22" />
+            <img src={logo} alt="ASEDUCH Logo" className="w-22 h-22" />
             <div className="hidden lg:block">
               <div className="text-lg font-bold text-gray-800">
-                {location.pathname.includes('/react/foundation') ? 'Fundación ASEDUCH' : 'ASEDUCH'}
+                ASEDUCH
               </div>
               <div className="text-xs text-gray-600">
-                {location.pathname === '/react/foundation' ? 'Fundación de Educadores de Chile' : 'Asociación de Educadores de Chile A.G.'}
+                Asociación de Educadores de Chile A.G.
               </div>
             </div>
           </div>
@@ -146,7 +146,7 @@ export default function Navbar() {
           </nav>
 
           {/* Social Media Links */}
-          <div className="hidden lg:flex space-x-4">
+          {/* <div className="hidden lg:flex space-x-4">
             <a href="https://facebook.com/Aseduch/" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-blue-600 transition" aria-label="Facebook">
               <FaFacebook size={20} />
             </a>
@@ -162,8 +162,8 @@ export default function Navbar() {
             <a href="https://www.linkedin.com/company/asociación-de-educadores-de-chile/" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-blue-600 transition" aria-label="LinkedIn">
               <FaLinkedin size={20} />
             </a>
-          </div>
-
+          </div> */}
+          <img src={logo_fundacion} alt="Fundación ASEDUCH Logo" className="hidden lg:block w-32 h-32" />
           {/* Mobile Hamburger */}
           <div className="flex items-center md:hidden">
             <div className="text-sm font-bold text-gray-800 mr-4">
@@ -206,44 +206,44 @@ export default function Navbar() {
           </button>
         </div>
         <nav className="mt-6 flex flex-col space-y-4 px-6 pb-20">
-          {links.map((link) =>
-            link.dropdown ? (
-              <div key={link.label} className="">
-                <details className="group">
-                  <summary className="font-semibold text-gray-800 mb-1 cursor-pointer flex items-center justify-between">
-                    {link.label}
-                    <svg className="w-5 h-5 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" /></svg>
-                  </summary>
-                  <ul className="ml-2 mb-4 mt-2">
-                    {link.dropdown.map((sublink) => (
-                      <li key={sublink.to}>
-                        <Link
-                          to={sublink.to}
-                          onClick={() => setMobileOpen(false)}
-                          className="block text-base py-1 px-2 rounded hover:bg-blue-50 hover:text-blue-600 transition"
-                        >
-                          {sublink.label}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </details>
-              </div>
-            ) : (
-              <Link
-                key={link.to}
-                to={link.to}
-                onClick={() => setMobileOpen(false)}
-                className={`block text-lg font-medium transition ${
-                  isActive(link.to)
-                    ? "text-blue-600"
-                    : "text-gray-800 hover:text-blue-600"
-                }`}
-              >
-                {link.label}
-              </Link>
-            )
-          )}
+  {links.map((link) =>
+    link.dropdown ? (
+      <div key={link.label} className="">
+        <details className="group">
+          <summary className="font-bold text-gray-800 mb-1 cursor-pointer flex items-center justify-between text-xl">
+            {link.label}
+            <svg className="w-5 h-5 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <ul className="ml-2 mb-4 mt-2">
+            {link.dropdown.map((sublink) => (
+              <li key={sublink.to}>
+                <Link
+                  to={sublink.to}
+                  onClick={() => setMobileOpen(false)}
+                  className="block text-sm py-1 px-2 rounded hover:bg-blue-50 hover:text-blue-600 transition font-normal"
+                >
+                  {sublink.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </details>
+      </div>
+    ) : (
+      <Link
+        key={link.to}
+        to={link.to}
+        onClick={() => setMobileOpen(false)}
+        className={`block text-xl font-bold transition ${
+          isActive(link.to)
+            ? "text-blue-600"
+            : "text-gray-800 hover:text-blue-600"
+        }`}
+      >
+        {link.label}
+      </Link>
+    )
+  )}
           <div className="flex justify-center space-x-6 mt-6">
             <a href="https://facebook.com/Aseduch/" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-blue-600 transition" aria-label="Facebook">
               <FaFacebook size={24} />

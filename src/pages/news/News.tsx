@@ -48,7 +48,24 @@ export default function News() {
   }, [posts]);
 
 
+  const [category, setCategory] = useState<'noticia' | 'prensa'>('noticia');
+
+  // Extraer el slug de categoría de cada post
+  function getCategorySlug(post: any): string {
+    const terms = post._embedded?.["wp:term"]?.[0];
+    if (!terms || !Array.isArray(terms)) return '';
+    const cat = terms.find((t: any) => t.slug === 'noticia' || t.slug === 'prensa');
+    return cat?.slug || '';
+  }
+
+  // Filtrar por categoría seleccionada
+  const filteredPosts = useMemo(() => {
+    return uniquePosts.filter(post => getCategorySlug(post) === category);
+  }, [uniquePosts, category]);
+
   const skeletons = Array.from({ length: PER_PAGE });
+
+  console.log("Soy todas las noticias", uniquePosts)
 
   return (
     <>
@@ -69,7 +86,7 @@ export default function News() {
           </div>
 
           {/* Buscador */}
-          <div className="flex justify-center">
+          <div className="flex justify-center mb-4">
             <input
               type="text"
               placeholder="Buscar por título…"
@@ -77,6 +94,22 @@ export default function News() {
               onChange={(e) => setSearch(e.target.value)}
               className="w-full md:w-80 px-4 py-2 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-[#1E3A5F]"
             />
+          </div>
+
+          {/* Filtros de categoría */}
+          <div className="flex justify-center gap-4 mb-8">
+            <button
+              className={`px-6 py-2 rounded-full font-semibold border transition-all duration-200 ${category === 'noticia' ? 'bg-[#1E3A5F] text-white border-[#1E3A5F]' : 'bg-gray-100 text-[#1E3A5F] border-gray-300 hover:bg-gray-200'}`}
+              onClick={() => setCategory('noticia')}
+            >
+              Noticias
+            </button>
+            <button
+              className={`px-6 py-2 rounded-full font-semibold border transition-all duration-200 ${category === 'prensa' ? 'bg-[#1E3A5F] text-white border-[#1E3A5F]' : 'bg-gray-100 text-[#1E3A5F] border-gray-300 hover:bg-gray-200'}`}
+              onClick={() => setCategory('prensa')}
+            >
+              Prensa
+            </button>
           </div>
 
           {/* Grid */}
@@ -105,7 +138,7 @@ export default function News() {
             ) : (
               <>
                 {/* Posts ya cargados */}
-                {uniquePosts.map((post) => {
+                {filteredPosts.map((post) => {
                   const media = post._embedded?.["wp:featuredmedia"]?.[0];
                   const imgSrc =
                     media?.media_details?.sizes?.medium?.source_url ||

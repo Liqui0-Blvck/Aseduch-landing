@@ -73,7 +73,7 @@ const podcasts: MediaItem[] = [
 ];
 
 const tabs: { label: string; key: MediaType; icon: React.ReactNode }[] = [
-  { label: "Radio", key: "radio", icon: <FaBroadcastTower /> },
+  // { label: "Radio", key: "radio", icon: <FaBroadcastTower /> },
   { label: "Videos", key: "videos", icon: <FaVideo /> },
   { label: "Podcasts", key: "podcasts", icon: <FaPodcast /> },
   { label: "Prensa", key: "prensa", icon: <FaRegNewspaper /> },
@@ -113,9 +113,9 @@ export default function MediaSection() {
       <div className="max-w-7xl mx-auto px-6 space-y-8">
         {/* Header */}
         <div className="text-center space-y-2">
-          <h2 className="text-3xl font-bold text-[#1E3A5F]">Medios</h2>
+          <h2 className="text-3xl font-bold text-[#1E3A5F]">Medios de comunicación</h2>
           <p className="text-gray-600">
-            Explora nuestra galería multimedia: videos, podcasts y presentaciones.
+            En esta sección encontrarás una variedad de contenidos que reflejan la actividad y la voz de ASEDUCH.
           </p>
         </div>
 

@@ -14,11 +14,9 @@ const OurHistory = ({ directiva_grupo }: { directiva_grupo: string }) => {
           Nuestra Historia
         </h2>
         <p className="text-lg leading-relaxed mb-6 text-gray-700">
-          Nuestra primera preocupación son los niños, niñas y adolescentes del sistema educativo chileno, como también todos aquellos que por diversas razones han tenido que desertar de él. Por ellos buscamos aportar en la discusión, investigación, diseño e implementación de políticas públicas que impacten positivamente en la educación.
+        Somos un grupo de educadoras y educadores (profesores titulados, docentes de otras profesiones y asistentes de la educación) que trabajamos en los diferentes niveles, modalidades y dependencias administrativas del sistema educacional chileno, pertenecientes a diversas comunidades educativas, unidos para crear la ASOCIACIÓN DE EDUCADORES DE CHILE, ASEDUCH, desde la independencia política pero con convicción, con el propósito de aportar con hechos concretos a la igualdad de oportunidades de todos los niños, niñas y adolescentes de nuestro país, para garantizarles acceso a una educación de calidad, plural e inclusiva y, a través de esto, lograr el desarrollo personal de estudiantes y educadores.
         </p>
-        <p className="text-lg leading-relaxed text-gray-700">
-          También somos una organización comprometida con la sociedad desde la función gremial, independiente de partidos políticos y autoridades, que busca mejorar las condiciones laborales de nuestros socios y atraer a personas con vocación educativa.
-        </p>
+        
       </div>
       <div
           className="w-full  flex justify-center"

@@ -77,10 +77,10 @@ export default function FoundationDocuments({ documents }: FoundationDocumentsPr
             Si requieres algún documento institucional que no encuentras aquí, no dudes en contactarnos.
           </p>
           <a 
-            href="mailto:documentos@aseduch.cl" 
+            href="mailto:contacto@aseduch.cl" 
             className="inline-flex items-center text-blue-700 hover:text-blue-900 font-medium"
           >
-            documentos@aseduch.cl
+            contacto@aseduch.cl
           </a>
         </div>
       </div>

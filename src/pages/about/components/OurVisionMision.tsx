@@ -22,14 +22,14 @@ const OurVisionMision = () => {
             <FaBullseye className="text-4xl text-[#C0392B] mb-4 mx-auto" />
             <h2 className="text-2xl font-bold text-[#1E3A5F] mb-2 text-center">Nuestra Misión</h2>
             <p className="text-gray-700 text-center">
-              Promover el respeto, el reconocimiento y la mejora continua del rol docente, impulsando acciones gremiales, sociales y pedagógicas que dignifiquen nuestra labor.
+            Nuestra primera preocupación son los niños, niñas y adolescentes del sistema educativo chileno, como también todos aquellos que por diversas razones han tenido que desertar de él. Por ellos buscamos aportar en la discusión, investigación, diseño e implementación de políticas públicas que impacten positivamente en la educación, en la diversidad de niveles, modalidades y dependencias administrativas en la que ésta se desarrolla, generando cambios a favor de los aprendizajes de los estudiantes.
             </p>
           </div>
           <div className="bg-blue-50 rounded-2xl p-8 shadow">
             <FaHandshake className="text-4xl text-[#C0392B] mb-4 mx-auto" />
             <h2 className="text-2xl font-bold text-[#1E3A5F] mb-2 text-center">Nuestra Visión</h2>
             <p className="text-gray-700 text-center">
-              Ser una organización sólida, inclusiva y activa en la transformación educativa del país, contribuyendo a una sociedad más justa desde la formación integral.
+            Así mismo, somos una organización comprometida con la sociedad desde la función gremial, manteniendo la independencia de los partidos políticos y las autoridades de Gobierno y Municipales, y buscamos acrecentar los beneficios y mejoras en las condiciones laborales de nuestros socios, a fin de motivar su perseverancia en el sistema educativo y atraer a él a cada vez más personas con verdadera vocación.
             </p>
           </div>
         </motion.div>

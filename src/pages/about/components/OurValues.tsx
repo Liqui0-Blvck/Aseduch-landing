@@ -13,38 +13,38 @@ const OurValues = () => {
         transition={{ duration: 0.8, delay: 0.3 }}
         viewport={{ once: true }}
       >
-      <h2 className="text-4xl font-extrabold text-[#1E3A5F] mb-12">Nuestros Valores</h2>
+      <h2 className="text-4xl font-extrabold text-[#1E3A5F] mb-12">Valores de los educadores</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
         {[
           {
             icon: <FaBalanceScale className="text-4xl text-[#C0392B] mb-2" />, 
-            label: "Transparencia",
-            description: "Actuamos con honestidad y apertura en todos nuestros procesos y decisiones, fomentando la confianza y la rendición de cuentas entre nuestros socios y la comunidad educativa."
+            label: "La educación como bien público",
+            description: "Creemos en la educación como un bien público, en el cual los niños y jóvenes tienen derecho a participar en igualdad de oportunidades y los adultos la obligación de proveerla, de manera plural, inclusiva y de calidad, independientemente de los estilos, formas, proyectos educativos o modalidades de administración de los establecimientos, todos legítimos y respetables."
           },
           {
             icon: <FaUsers className="text-4xl text-[#1E3A5F] mb-2" />, 
-            label: "Equidad",
-            description: "Promovemos la igualdad de oportunidades para todos los educadores, asegurando un trato justo y sin discriminación, y luchando por una educación inclusiva y de calidad para todos."
+            label: "Derecho preferente de los padres",
+            description: "Creemos que los padres tienen el derecho preferente de escoger el tipo de educación que habrán de darle a sus hijos, respetando su libertad para elegir proyectos educativos diversos, de acuerdo con sus propias convicciones."
           },
           {
             icon: <FaComments className="text-4xl text-[#C0392B] mb-2" />, 
-            label: "Colaboración",
-            description: "Fomentamos el trabajo en equipo, el diálogo y la cooperación entre nuestros miembros y aliados, convencidos de que juntos logramos un mayor impacto en la educación chilena."
+            label: "Comunidades y Centros Educativos",
+            description: "Creemos en las Comunidades y Centros Educativos como un lugar esencial de encuentro y desarrollo de todas las personas que participan en ellas, que acoge, transforma y entrega protección a sus estudiantes, en la que los padres y apoderados pueden confiar y aprender."
           },
           {
             icon: <FaChalkboardTeacher className="text-4xl text-[#1E3A5F] mb-2" />, 
-            label: "Vocación",
-            description: "Valoramos la pasión y el compromiso por la enseñanza, reconociendo la dedicación de quienes eligen educar y transformar vidas a través del aprendizaje."
+            label: "Rol de los educadores profesionales",
+            description: "Creemos en el rol preponderante de los educadores profesionales en la sociedad, ya sean estos profesores titulados, docentes de otras profesiones o asistentes de la educación."
           },
           {
             icon: <FaHandshake className="text-4xl text-[#C0392B] mb-2" />, 
-            label: "Compromiso",
-            description: "Nos involucramos activamente en la defensa de los derechos de los educadores y en la mejora continua del sistema educativo, manteniendo siempre el bienestar de nuestros estudiantes como prioridad."
+            label: "Asociatividad gremial",
+            description: "Creemos en la asociatividad gremial como ente para trabajar por mejorar las condiciones laborales de sus socios, su formación permanente, la comunicación entre pares y, en general, su calidad de vida."
           },
           {
             icon: <FaBullseye className="text-4xl text-[#1E3A5F] mb-2" />, 
-            label: "Respeto",
-            description: "Creemos en el trato digno y respetuoso hacia todas las personas, valorando la diversidad de opiniones y experiencias dentro de nuestra organización y en la sociedad."
+            label: "Diálogo",
+            description: "Creemos en el diálogo como la forma para buscar la verdad y el modo de resolución de diferencias y problemas."
           },
         ].map((val, i) => (
           <div key={i} className="bg-white p-8 rounded-2xl shadow flex flex-col items-center text-center hover:shadow-lg transition-shadow">

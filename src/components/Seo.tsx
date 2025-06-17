@@ -13,14 +13,6 @@ interface SeoProps {
 }
 
 export function Seo({ title, description, url, image, jsonLd }: SeoProps) {
-  useDocumentTitle(title);
-  useDocumentMeta({ name: 'description', content: description });
-  useDocumentMeta({ name: 'og:title', content: title });
-  useDocumentMeta({ name: 'og:description', content: description });
-  if (url)   useDocumentMeta({ name: 'og:url', content: url });
-  if (image) useDocumentMeta({ name: 'og:image', content: image });
-  if (jsonLd) useJsonLd(jsonLd);
-
   useEffect(() => {
     if (!url) return;
     let link: HTMLLinkElement|null = document.querySelector(`link[rel="canonical"]`);

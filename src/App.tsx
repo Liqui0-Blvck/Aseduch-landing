@@ -3,6 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import MediaSection from "./pages/media/MediaSection";
 import NotFound from "./pages/404";
 import { useScrollToTop } from "./hooks/useScrollToTop";
+import SocialQuotes from "./pages/partner/components/SocialQuotes";
 
 // Lazy-load de layout
 const Navbar    = lazy(() => import("./components/Navbar"));
@@ -67,7 +68,7 @@ export default function App() {
           <Route path="/react/partners" element={<Partners />} />
           <Route path="/react/partners/advices" element={<Advices />} />
           <Route path="/react/partners/rights" element={<Rights />} />
-          {/* <Route path="/react/partners/social-quotes" element={<SocialQuote />} /> */}
+          <Route path="/react/partners/social-quotes" element={<SocialQuotes />} />
           <Route path="/react/partners/benefits" element={<Benefits />} />
           <Route path="*" element={<NotFound />} />
 

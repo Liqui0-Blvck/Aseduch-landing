@@ -4,7 +4,7 @@ import { useLocation } from "react-router-dom";
 import { FaFacebook, FaInstagram, FaYoutube, FaLinkedin, FaMapMarkerAlt, FaPhone, FaEnvelope } from "react-icons/fa";
 import { FaX } from "react-icons/fa6";
 import logo from "../assets/aseduch-logo.jpg";
-import logo_fundacion from "../assets/logo-fundacion-celeste.png"
+import logo_fundacion from "../assets/logo_celeste.png"
 
 export default function Footer() {
   const location = useLocation();

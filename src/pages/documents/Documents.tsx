@@ -11,7 +11,7 @@ import { PdfViewer } from "../../components/PdfViewer";
 pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.js`;
 
 // Definición de tipos para los documentos
-type Categoria = 'analisis' | 'declaraciones';
+type Categoria = 'analisis' | 'declaraciones' | 'estatutos';
 
 interface DocumentItem {
   id: string;
@@ -55,17 +55,7 @@ const documentosPorCategoria: Record<Categoria, { titulo: string; documentos: Do
   declaraciones: {
     titulo: "Declaraciones Públicas",
     documentos: [
-      {
-        id: 'declaracion-estatutos',
-        title: "Estatutos de la Asociación",
-        description: "Documento oficial con los estatutos actualizados de ASEDUCH A.G.",
-        url: "/react/assets/declaraciones/Estatutos-ASEDUCH_7abr2022.pdf",
-        fecha: "07/04/2022",
-        categoria: 'declaraciones',
-        destacado: true,
-        type: 'pdf',
-        directUrl: "/react/assets/declaraciones/Estatutos-ASEDUCH_7abr2022.pdf"
-      },
+      
       {
         id: 'minuta-22022-simce',
         title: "Minuta SIMCE 2022",
@@ -96,6 +86,22 @@ const documentosPorCategoria: Record<Categoria, { titulo: string; documentos: Do
         type: 'pdf',
         directUrl: "/react/assets/declaraciones/toma-liceos.pdf"
       }
+    ]
+  }, 
+  estatutos: {
+    titulo: 'Estatutos y Reglamentos',
+    documentos: [
+      {
+        id: 'declaracion-estatutos',
+        title: "Estatutos de la Asociación",
+        description: "Documento oficial con los estatutos actualizados de ASEDUCH A.G.",
+        url: "/react/assets/declaraciones/Estatutos-ASEDUCH_7abr2022.pdf",
+        fecha: "07/04/2022",
+        categoria: 'declaraciones',
+        destacado: true,
+        type: 'pdf',
+        directUrl: "/react/assets/declaraciones/Estatutos-ASEDUCH_7abr2022.pdf"
+      },
     ]
   }
 };

@@ -181,7 +181,7 @@ export default function FoundationActivities({ activities }: FoundationActivitie
             <h3 className="text-lg font-semibold text-blue-800 mb-2">¿Quieres proponer una actividad?</h3>
             <p className="text-blue-700 mb-4">Si tienes una propuesta de actividad o quieres colaborar con la Fundación, escríbenos.</p>
             <a 
-              href="mailto:actividades@aseduch.cl" 
+              href="mailto:contacto@aseduch.cl" 
               className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors font-medium"
             >
               Contactar a la Fundación

@@ -21,7 +21,7 @@ export default function PaymentSection() {
       'Tipo de cuenta: Cuenta Corriente',
       'N° de cuenta: 985911223',
       'RUT: 65.222.536-5',
-      'Email: tesoreria@aseduch.cl',
+      'Email: contacto@aseduch.cl',
       'Asunto: Pago de cuota socio',
     ]
   };
@@ -40,7 +40,7 @@ export default function PaymentSection() {
             Datos de Transferencia
           </h2>
           <p className="mt-4 text-xl text-gray-600">
-            Realiza tu pago mediante transferencia bancaria
+            Paga tu cuota social a través de la transferencia bancaria
           </p>
         </motion.div>
 
