@@ -39,7 +39,7 @@ export default function NewsSection() {
         {/* Encabezado */}
         <div className="flex justify-between items-center mb-12">
           <h2 className="text-4xl font-bold text-[#1E3A5F]">Noticias</h2>
-          <Link to="/react/news" className="text-[#1E3A5F] hover:underline">
+          <Link to="/news/" className="text-[#1E3A5F] hover:underline">
             Ver todas →
           </Link>
         </div>
@@ -100,7 +100,7 @@ export default function NewsSection() {
                   />
 
                   <Link
-                    to={`/react/news/${post.id}`}
+                    to={`/news/${post.id}`}
                     className="mt-auto text-[#1E3A5F] font-medium hover:underline self-start"
                   >
                     Leer más →

@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { motion, type Variants } from "framer-motion";
 
-import { FaPodcast, FaVideo, FaBroadcastTower, FaRegNewspaper } from "react-icons/fa";
+import { FaPodcast, FaVideo, FaRegNewspaper } from "react-icons/fa";
 import PrensaFiles from "./PrensaFiles";
-type MediaType = "radio" | "videos" | "podcasts" | "prensa";
+type MediaType =  "videos" | "podcasts" | "prensa";
 
 /* Esta interfaz define la estructura de cada elemento multimedia.
    - Para videos de YouTube, guardamos solo el ID del video en la URL
@@ -23,11 +23,6 @@ interface MediaItem {
 
 /* Lista de videos de YouTube. Cada video tiene su ID único de YouTube
    y podemos especificar en qué segundo debe comenzar */
-
-const radio: MediaItem[] = [
-  { id: 1, title: "Entrevista Radio Cooperativa", date: "2025-03-15", description: "Participación de ASEDUCH A.G. en programa matinal.", link: "#" },
-];
-
 const videoUrls: MediaItem[] = [
   {
     id: 1,
@@ -91,13 +86,10 @@ const tabItem: Variants = {
 
 
 export default function MediaSection() {
-  const [activeTab, setActiveTab] = useState<MediaType>("radio");
+  const [activeTab, setActiveTab] = useState<MediaType>("videos");
 
   let items: MediaItem[] = [];
   switch (activeTab) {
-    case "radio":
-      items = radio;
-      break;
     case "videos":
       items = videoUrls;
       break;
@@ -145,20 +137,6 @@ export default function MediaSection() {
 
         {/* Contenido por tab */}
         <div>
-          {activeTab === "radio" && (
-            <div className="grid md:grid-cols-2 gap-8">
-              {items.map((item) => (
-                <a href={item.link} key={item.id} className="block bg-gray-50 rounded-xl shadow p-3 hover:shadow-md transition">
-                  <div className="flex items-center gap-3 mb-2 text-green-700">
-                    <FaBroadcastTower />
-                    <span className="font-bold">{item.title}</span>
-                  </div>
-                  <div className="text-xs text-gray-500 mb-1">{item.date}</div>
-                  <div className="text-gray-700 mb-2">{item.description}</div>
-                </a>
-              ))}
-            </div>
-          )}
           {activeTab === "videos" && (
             <div className="grid md:grid-cols-2 gap-8">
               {items.map((item) => (

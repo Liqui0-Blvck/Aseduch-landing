@@ -5,7 +5,7 @@ import { Seo } from "../components/Seo";
 export default function NotFound({ 
   message = 'Lo sentimos, la página que buscas no existe.', 
   button = 'Volver al inicio',
-  link = '/react'
+  link = '/'
   }: { message?: string, button?: string, link?: string }) {
   return (
     <>

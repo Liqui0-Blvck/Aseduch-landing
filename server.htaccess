@@ -1,11 +1,11 @@
 <IfModule mod_rewrite.c>
   RewriteEngine On
-  RewriteBase /react/
+  RewriteBase /
 
   # Si la petición no es un archivo real…
   RewriteCond %{REQUEST_FILENAME} !-f
   # …ni un directorio real…
   RewriteCond %{REQUEST_FILENAME} !-d
   # entonces sirve index.html de React:
-  RewriteRule ^.*$ /react/index.html [L,QSA]
+  RewriteRule ^.*$ /index.html [L,QSA]
 </IfModule>

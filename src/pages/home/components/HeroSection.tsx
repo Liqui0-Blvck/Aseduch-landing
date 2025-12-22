@@ -21,13 +21,13 @@ export default function HeroSection() {
           </p>
           <div className="flex flex-col lg:flex-row justify-center lg:justify-start gap-4 w-full max-w-md mx-auto lg:max-w-none mb-8">
             <Link
-              to="/react/partners"
+              to="/partners"
               className="bg-[#C0392B] hover:bg-red-700 text-white px-8 py-3 rounded-full text-lg font-semibold transition-colors text-center"
             >
               ¡Únete a ASEDUCH!
             </Link>
             <Link
-              to="/react/about"
+              to="/about"
               className="border-2 border-[#1E3A5F] text-[#1E3A5F] hover:bg-[#1E3A5F] hover:text-white px-8 py-3 rounded-full text-lg font-semibold transition-colors text-center"
             >
               Conoce más

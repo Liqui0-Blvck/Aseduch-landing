@@ -72,7 +72,7 @@ export default function News() {
       <Seo
         title="Actividades | ASEDUCH"
         description="Descubre las últimas novedades, eventos y comunicados de ASEDUCH, y mantente informado sobre nuestras actividades y logros."
-        url="https://aseduch.cl/react/news"
+        url="https://aseduch.cl/news"
       />
 
       <section className="bg-white text-gray-800 py-20">
@@ -157,7 +157,7 @@ export default function News() {
                       key={post.id}
                       variants={fadeInUp}
                       className="cursor-pointer bg-gray-100 rounded-2xl overflow-hidden shadow hover:shadow-lg transition flex flex-col"
-                      onClick={() => navigate(`/react/news/${post.id}`)}
+                      onClick={() => navigate(`/news/${post.id}`)}
                     >
                       {imgSrc && (
                         <img

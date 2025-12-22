@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Seo } from '../../../components/Seo';
-import { FaCalendarAlt, FaMapMarkerAlt, FaExternalLinkAlt } from 'react-icons/fa';
+import { FaCalendarAlt, FaMapMarkerAlt } from 'react-icons/fa';
 import { PdfViewer } from '../../../components/PdfViewer';
 
 interface Activity {
@@ -41,12 +41,12 @@ const sampleActivities: Activity[] = [
     description: 'Entregaremos herramientas inclusivas y prácticas para fortalecer la labor docente en el aula con estudiantes con Trastorno del Espectro Autista (TEA).',
     image: 'https://images.unsplash.com/photo-1571260899304-425eee4c7efc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
     url: '#',
-    file: '/react/assets/fundacion/seminario_ASEDUCH__TEEN_STAR.pdf'
+    file: '/assets/fundacion/seminario_ASEDUCH__TEEN_STAR.pdf'
   },
   {
     id: 3,
     title: 'Seminario Temuco 2025',
-    date: 'Agosto, 2025',
+    date: 'Noviembre, 2025',
     location: 'Temuco',
     description: 'Próximamente más información sobre este importante evento para la comunidad educativa de la región de La Araucanía.',
     image: 'https://images.unsplash.com/photo-1577896851231-70ef18881754?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',

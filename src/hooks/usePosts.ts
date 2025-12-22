@@ -38,7 +38,7 @@ export function usePosts({
     if (categoryName) params.set("category_name", categoryName);
     if (search) params.set("search", search);
 
-    fetch(`https://aseduch.cl/wp-json/wp/v2/posts?${params.toString()}`)
+    fetch(`https://aseduch.cl/index.php/wp-json/wp/v2/posts?${params.toString()}`)
       .then((res) => {
         if (!res.ok) {
           if (res.status === 400) {

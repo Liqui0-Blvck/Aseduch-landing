@@ -13,12 +13,7 @@
     "test:coverage": "vitest run --coverage",
     "test:ui": "vitest --ui",
     "build": "npm run generate:sitemap && vite build",
-    "prepostbuild": "rm -rf build && cp -r dist build",
-    "postbuild": "react-snap"
-  },
-  "reactSnap": {
-    "include": ["/react/", "/react/about", "/react/news", "/react/docs", "/react/partners"],
-    "puppeteerArgs": ["--no-sandbox"]
+    "prepostbuild": "rm -rf build && cp -r dist build"
   },
   "dependencies": {
     "@react-pdf-viewer/core": "^3.12.0",

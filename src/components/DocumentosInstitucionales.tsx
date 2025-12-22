@@ -16,14 +16,14 @@ export function DocumentosInstitucionales() {
     {
       titulo: "Estatutos de la Asociación",
       descripcion: "Documento oficial con los estatutos actualizados de ASEDUCH A.G.",
-      url: "/react/assets/declaraciones/Estatutos-ASEDUCH_7abr2022.pdf",
+      url: "/assets/declaraciones/Estatutos-ASEDUCH_7abr2022.pdf",
       tipo: 'pdf',
       fecha: "07/04/2022"
     },
     {
       titulo: "Estatutos Fundación ASEDUCH",
       descripcion: "Documentación oficial de la Fundación ASEDUCH.",
-      url: "/react/assets/fundacion/escritura_constitucion.pdf",
+      url: "/assets/fundacion/escritura_constitucion.pdf",
       tipo: 'pdf',
       fecha: "10/05/2023"
     },

@@ -1,0 +1,28 @@
+RewriteEngine On
+
+# Configuración de CORS para desarrollo local
+<IfModule mod_headers.c>
+  # Permitir acceso desde localhost en diferentes puertos comunes de desarrollo
+  SetEnvIf Origin "^http://localhost(:\d+)?$" ALLOWED_ORIGIN=$0
+  Header set Access-Control-Allow-Origin "%{ALLOWED_ORIGIN}e" env=ALLOWED_ORIGIN
+  Header set Access-Control-Allow-Methods "GET, POST, OPTIONS"
+  Header set Access-Control-Allow-Headers "Origin, X-Requested-With, Content-Type, Accept, Authorization"
+  Header set Access-Control-Allow-Credentials "true"
+  
+  # Pre-flight OPTIONS requests
+  RewriteCond %{REQUEST_METHOD} OPTIONS
+  RewriteRule ^(.*)$ $1 [R=200,L]
+</IfModule>
+
+# Permitir acceso a la API REST de WordPress
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+RewriteCond %{REQUEST_URI} ^/index.php/wp-json/ [NC]
+RewriteRule ^ - [L]
+
+# Permitir acceso a archivos y directorios reales
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Redirigir todo lo demás a index.html (SPA React)
+RewriteRule ^ index.html [L]

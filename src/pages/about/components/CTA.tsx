@@ -15,7 +15,7 @@ const CTA = () => {
         Únete a nuestra comunidad de educadores y fortalece tu voz en la construcción de una mejor educación para Chile.
       </p>
       <Link
-        to="/react/partners"
+        to="/partners"
         className="inline-block bg-[#C0392B] text-white px-8 py-4 rounded-full font-semibold hover:bg-red-700 transition"
       >
         ¡Hazte Socio!

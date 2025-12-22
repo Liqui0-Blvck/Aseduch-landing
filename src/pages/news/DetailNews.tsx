@@ -24,7 +24,7 @@ interface WPPost {
   };
 }
 
-const BASE_PATH = "/react/news";
+const BASE_PATH = "/news";
 
 export default function DetailNews() {
   const { id } = useParams<{ id: string }>();
@@ -91,7 +91,7 @@ export default function DetailNews() {
     return (
       <NotFound
         message="Lo sentimos, la noticia que buscas no existe."
-        link="/react/news"
+        link="/news"
         button="Volver a las noticias"
       />
     );

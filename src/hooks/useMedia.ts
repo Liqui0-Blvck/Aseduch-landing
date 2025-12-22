@@ -10,7 +10,7 @@ export const useMedia = (query: number[]) => {
       try {
         const responses = await Promise.all(
           query.map(id =>
-            fetch(`https://aseduch.cl/wp-json/wp/v2/media/${id}`).then(res => res.json())
+            fetch(`https://aseduch.cl/index.php/wp-json/wp/v2/media/${id}`).then(res => res.json())
           )
         );
         setMedia(responses);

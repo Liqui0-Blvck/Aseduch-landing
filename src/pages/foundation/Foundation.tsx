@@ -8,7 +8,7 @@ const foundationDocuments: FoundationDocument[] = [
     title: 'Estatutos Fundación ASEDUCH',
     type: 'PDF',
     size: '1.2 MB',
-    url: '/react/assets/fundacion/escritura_constitucion.pdf',
+    url: '/assets/fundacion/escritura_constitucion.pdf',
     fecha: '10/05/2023'
   },
 ];

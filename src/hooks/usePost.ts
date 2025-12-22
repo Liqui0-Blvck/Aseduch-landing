@@ -9,7 +9,7 @@ export function usePost(id?: string) {
   useEffect(() => {
     if (!id) return;
     setLoading(true);
-    fetch(`https://aseduch.cl/wp-json/wp/v2/posts/${id}?_embed=true`)
+    fetch(`https://aseduch.cl/index.php/wp-json/wp/v2/posts/${id}?_embed=true`)
       .then((res) => {
         if (!res.ok) throw new Error(`Error ${res.status}`);
         return res.json();

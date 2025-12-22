@@ -57,6 +57,7 @@ lerna-debug.log*
 /public/
 /public/assets/
 /src/assets/
+/public_html/
 *.jpg
 *.jpeg
 *.png

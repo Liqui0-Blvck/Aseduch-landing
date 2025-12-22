@@ -2,7 +2,7 @@ import { writeFile } from 'node:fs/promises';
 import fetch from 'node-fetch';
 
 const SITE_URL = 'https://aseduch.cl';
-const BASE_PATH = '/react';
+const BASE_PATH = '';
 
 const staticPaths = [
   '/',
@@ -24,7 +24,7 @@ const staticPaths = [
 
 function getStaticUrls(): string[] {
   return staticPaths.map((path) =>
-    `${SITE_URL}${BASE_PATH}${path}`
+    `${SITE_URL}${path}`
   );
 }
 
@@ -35,13 +35,13 @@ interface WPPost {
 async function getPostUrls(): Promise<string[]> {
   const perPage = 100;
   const res = await fetch(
-    `https://aseduch.cl/wp-json/wp/v2/posts?per_page=${perPage}`
+    `https://aseduch.cl/index.php/wp-json/wp/v2/posts?per_page=${perPage}`
   );
   if (!res.ok) {
     throw new Error(`WP REST error: ${res.status} ${res.statusText}`);
   }
   const posts = await res.json() as WPPost[];
-  return posts.map((p) => `${SITE_URL}${BASE_PATH}/news/${p.id}`);
+  return posts.map((p) => `${SITE_URL}/news/${p.id}`);
 }
 
 interface SitemapUrl {

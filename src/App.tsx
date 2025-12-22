@@ -50,26 +50,26 @@ export default function App() {
       <Suspense fallback={<Loader />}>
         <Routes>
           
-          <Route path="/react/" element={<Home />} />
-          <Route path="/react/about" element={<About />} />
-          <Route path="/react/docs" element={<Documents />} />
-          <Route path="/react/partners" element={<Partners />} />
-          <Route path="/react/news" element={<News />} />
-          <Route path="/react/news/:id" element={<DetailNews />} />
-          <Route path="/react/media" element={<MediaSection />} />
-          <Route path="/react/media/press-media/:id" element={<DetailNews />} />
-          <Route path="/react/foundation" element={<Foundation />} />
-          <Route path="/react/foundation/activities" element={<FoundationActivities activities={[]} />} />
-          <Route path="/react/foundation/donations" element={<FoundationDonations />} />
-          <Route path="/react/about" element={<About />} />
-          <Route path="/react/about/vision-mision" element={<VisionMision />} />
-          <Route path="/react/about/values" element={<Values />} />
-          <Route path="/react/about/directive" element={<Directive />} />
-          <Route path="/react/partners" element={<Partners />} />
-          <Route path="/react/partners/advices" element={<Advices />} />
-          <Route path="/react/partners/rights" element={<Rights />} />
-          <Route path="/react/partners/social-quotes" element={<SocialQuotes />} />
-          <Route path="/react/partners/benefits" element={<Benefits />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/docs" element={<Documents />} />
+          <Route path="/partners" element={<Partners />} />
+          <Route path="/news" element={<News />} />
+          <Route path="/news/:id" element={<DetailNews />} />
+          <Route path="/media" element={<MediaSection />} />
+          <Route path="/media/press-media/:id" element={<DetailNews />} />
+          <Route path="/foundation" element={<Foundation />} />
+          <Route path="/foundation/activities" element={<FoundationActivities activities={[]} />} />
+          <Route path="/foundation/donations" element={<FoundationDonations />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/about/vision-mision" element={<VisionMision />} />
+          <Route path="/about/values" element={<Values />} />
+          <Route path="/about/directive" element={<Directive />} />
+          <Route path="/partners" element={<Partners />} />
+          <Route path="/partners/advices" element={<Advices />} />
+          <Route path="/partners/rights" element={<Rights />} />
+          <Route path="/partners/social-quotes" element={<SocialQuotes />} />
+          <Route path="/partners/benefits" element={<Benefits />} />
           <Route path="*" element={<NotFound />} />
 
         </Routes>

@@ -35,11 +35,7 @@ export default function Footer() {
                 {isFoundationPage ? 'Fundación de Educadores de Chile' : 'Asociación de Educadores de Chile A.G.'}
               </div>
             </div>
-          </div>
-          <p className="text-sm text-gray-600 leading-relaxed mt-2">
-            Trabajando por una educación de calidad y el bienestar de los educadores del país desde 1998.
-          </p>
-          
+          </div>          
           {/* Social Media Links */}
           <div className="flex space-x-4 mt-4">
             <a href="https://facebook.com/Aseduch/" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-blue-600 transition" aria-label="Facebook">
@@ -69,12 +65,12 @@ export default function Footer() {
         >
           <h3 className="text-lg font-semibold text-blue-900 mb-4">Enlaces Rápidos</h3>
           <ul className="space-y-2 text-sm">
-            <li><Link to="/react/" className="text-gray-600 hover:text-blue-600 transition">Inicio</Link></li>
-            <li><Link to="/react/about" className="text-gray-600 hover:text-blue-600 transition">Quiénes Somos</Link></li>
-            <li><Link to="/react/docs" className="text-gray-600 hover:text-blue-600 transition">Documentos</Link></li>
-            <li><Link to="/react/partners" className="text-gray-600 hover:text-blue-600 transition">Socios</Link></li>
-            <li><Link to="/react/news" className="text-gray-600 hover:text-blue-600 transition">Actividades</Link></li>
-            <li><Link to="/react/media" className="text-gray-600 hover:text-blue-600 transition">Medios</Link></li>
+            <li><Link to="/" className="text-gray-600 hover:text-blue-600 transition">Inicio</Link></li>
+            <li><Link to="/about" className="text-gray-600 hover:text-blue-600 transition">Quiénes Somos</Link></li>
+            <li><Link to="/docs" className="text-gray-600 hover:text-blue-600 transition">Documentos</Link></li>
+            <li><Link to="/partners" className="text-gray-600 hover:text-blue-600 transition">Socios</Link></li>
+            <li><Link to="/news" className="text-gray-600 hover:text-blue-600 transition">Actividades</Link></li>
+            <li><Link to="/media" className="text-gray-600 hover:text-blue-600 transition">Medios</Link></li>
           </ul>
         </motion.div>
 
@@ -87,9 +83,9 @@ export default function Footer() {
         >
           <h3 className="text-lg font-semibold text-blue-900 mb-4">Fundación</h3>
           <ul className="space-y-2 text-sm">
-            <li><Link to="/react/foundation" className="text-gray-600 hover:text-blue-600 transition">Documentos</Link></li>
-            <li><Link to="/react/foundation/activities" className="text-gray-600 hover:text-blue-600 transition">Actividades</Link></li>
-            <li><Link to="/react/foundation/donations" className="text-gray-600 hover:text-blue-600 transition">Donaciones</Link></li>
+            <li><Link to="/foundation" className="text-gray-600 hover:text-blue-600 transition">Documentos</Link></li>
+            <li><Link to="/foundation/activities" className="text-gray-600 hover:text-blue-600 transition">Actividades</Link></li>
+            <li><Link to="/foundation/donations" className="text-gray-600 hover:text-blue-600 transition">Donaciones</Link></li>
           </ul>
         </motion.div>
 

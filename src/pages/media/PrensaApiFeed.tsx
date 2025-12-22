@@ -10,7 +10,7 @@ interface PrensaItem {
 }
 
 // Cambia esta URL por la de tu WordPress si es necesario
-const WORDPRESS_API_URL = "https://aseduch.cl/wp-json/wp/v2/posts?category_name=prensa&_embed";
+const WORDPRESS_API_URL = "https://aseduch.cl/index.php/wp-json/wp/v2/posts?category_name=prensa&_embed";
 
 
 

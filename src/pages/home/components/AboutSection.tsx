@@ -73,7 +73,7 @@ export default function AboutSection() {
 
           <div className="mt-8">
             <Link
-              to="/react/about"
+              to="/about"
               className="inline-block bg-[#C0392B] hover:bg-red-700 text-white px-8 py-3 rounded-full text-lg font-semibold transition-colors"
             >
               Conoce más sobre ASEDUCH

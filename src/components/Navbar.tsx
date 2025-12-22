@@ -31,38 +31,38 @@ export default function Navbar() {
 
   // Menú con subenlaces para dropdowns
   const links = [
-    { to: "/react/", label: "Inicio" },
+    { to: "/", label: "Inicio" },
     {
       label: "Quiénes Somos",
-      to: "/react/about",
+      to: "/about",
       dropdown: [
-        { to: "/react/about", label: "Historia" },
-        { to: "/react/about/vision-mision", label: "Misión" },
-        { to: "/react/about/values", label: "Valores" },
-        { to: "/react/about/directive", label: "Directiva" }
+        { to: "/about", label: "Historia" },
+        { to: "/about/vision-mision", label: "Misión" },
+        { to: "/about/values", label: "Valores" },
+        { to: "/about/directive", label: "Directiva" }
       ]
     },
-    { to: "/react/docs", label: "Documentos" },
+    { to: "/docs", label: "Documentos" },
     {
       label: "Socios",
-      to: "/react/partners",
+      to: "/partners",
       dropdown: [
-        { to: "/react/partners", label: "Hazte socio" },
-        { to: "/react/partners/advices", label: "Asesoría Y Servicios" },
-        { to: "/react/partners/rights", label: "Derechos y obligaciones" },
-        { to: "/react/partners/benefits", label: "Beneficios" },
-        { to: "/react/partners/social-quotes", label: "Paga Tu Cuota" },
+        { to: "/partners", label: "Hazte socio" },
+        { to: "/partners/benefits", label: "Beneficios" },
+        { to: "/partners/advices", label: "Asesoría Y Servicios" },
+        { to: "/partners/rights", label: "Derechos y obligaciones" },
+        { to: "/partners/social-quotes", label: "Paga Tu Cuota" },
       ]
     },
-    { to: "/react/news", label: "Noticias" },
-    { to: "/react/media", label: "Comunicaciones" },
+    { to: "/news", label: "Noticias" },
+    { to: "/media", label: "Comunicaciones" },
     {
       label: "Fundación",
-      to: "/react/foundation",
+      to: "/foundation",
       dropdown: [
-        { to: "/react/foundation", label: "Documentos" },
-        { to: "/react/foundation/activities", label: "Actividades" },
-        { to: "/react/foundation/donations", label: "Donaciones" }
+        { to: "/foundation", label: "Documentos" },
+        { to: "/foundation/activities", label: "Actividades" },
+        { to: "/foundation/donations", label: "Donaciones" }
       ]
     }
   ];
@@ -167,7 +167,7 @@ export default function Navbar() {
           {/* Mobile Hamburger */}
           <div className="flex items-center md:hidden">
             <div className="text-sm font-bold text-gray-800 mr-4">
-              {location.pathname.includes('/react/foundation') ? 'Fundación ASEDUCH' : 'ASEDUCH'}
+              {location.pathname.includes('/foundation') ? 'Fundación ASEDUCH' : 'ASEDUCH'}
             </div>
             <button
               onClick={() => setMobileOpen((o) => !o)}
@@ -195,7 +195,7 @@ export default function Navbar() {
       >
         <div className="sticky top-0 px-6 py-4 flex items-center justify-between border-b border-zinc-300 bg-white">
           <div className="flex items-center space-x-3">
-            <img src={location.pathname.includes('/react/foundation') ? logo_fundacion : logo} alt="ASEDUCH Logo" className="h-12" />
+            <img src={location.pathname.includes('/foundation') ? logo_fundacion : logo} alt="ASEDUCH Logo" className="h-12" />
           </div>
           <button
             onClick={() => setMobileOpen(false)}

@@ -24,38 +24,38 @@ interface PrensaYearGroup {
 // Datos de prensa organizados por año y con información clara
 const prensaData: PrensaFile[] = [
   // 2021
-  { id: 1, title: 'Profesores a la espera', year: '2021', path: encodeURI('/react/assets/prensa/Prensa_2021/Carta_ElMer_20211125_Profesores_a_la_espera.pdf'), type: 'Carta', source: 'El Mercurio', date: '25/11/2021' },
-  // { id: 2, title: 'De héroes a antagonistas', year: '2021', path: encodeURI('/react/assets/prensa/Prensa_2021/Columna_LaTer_20211102_De_heroes_a_antagonistas.pdf'), type: 'Columna', source: 'La Tercera', date: '02/11/2021' },
-  { id: 3, title: 'Nuevo gremio docente', year: '2021', path: encodeURI('/react/assets/prensa/Prensa_2021/Editorial_ElMer_20211031_Nuevo_gremio_docente.pdf'), type: 'Editorial', source: 'El Mercurio', date: '31/10/2021' },
-  { id: 4, title: 'Gremio alternativo al CCPP', year: '2021', path: encodeURI('/react/assets/prensa/Prensa_2021/Editorial_LaTer_20211125_Gremio_alternativo_al_CCPP.pdf'), type: 'Editorial', source: 'La Tercera', date: '25/11/2021' },
-  // { id: 5, title: 'Entrevista a José Luis Velasco', year: '2021', path: encodeURI('/react/assets/prensa/Prensa_2021/Entrevista_EmolTV_20211103_JoseLuisVelasco.pdf'), type: 'Entrevista', source: 'Emol TV', date: '03/11/2021' },
-  { id: 6, title: 'Docentes crean nuevo gremio', year: '2021', path: encodeURI('/react/assets/prensa/Prensa_2021/Nota_ElMer_20211028_Docentes_crean_nuevo_gremio.pdf'), type: 'Nota', source: 'El Mercurio', date: '28/10/2021' },
+  { id: 1, title: 'Profesores a la espera', year: '2021', path: encodeURI('/assets/prensa/Prensa_2021/Carta_ElMer_20211125_Profesores_a_la_espera.pdf'), type: 'Carta', source: 'El Mercurio', date: '25/11/2021' },
+  // { id: 2, title: 'De héroes a antagonistas', year: '2021', path: encodeURI('/assets/prensa/Prensa_2021/Columna_LaTer_20211102_De_heroes_a_antagonistas.pdf'), type: 'Columna', source: 'La Tercera', date: '02/11/2021' },
+  { id: 3, title: 'Nuevo gremio docente', year: '2021', path: encodeURI('/assets/prensa/Prensa_2021/Editorial_ElMer_20211031_Nuevo_gremio_docente.pdf'), type: 'Editorial', source: 'El Mercurio', date: '31/10/2021' },
+  { id: 4, title: 'Gremio alternativo al CCPP', year: '2021', path: encodeURI('/assets/prensa/Prensa_2021/Editorial_LaTer_20211125_Gremio_alternativo_al_CCPP.pdf'), type: 'Editorial', source: 'La Tercera', date: '25/11/2021' },
+  // { id: 5, title: 'Entrevista a José Luis Velasco', year: '2021', path: encodeURI('/assets/prensa/Prensa_2021/Entrevista_EmolTV_20211103_JoseLuisVelasco.pdf'), type: 'Entrevista', source: 'Emol TV', date: '03/11/2021' },
+  { id: 6, title: 'Docentes crean nuevo gremio', year: '2021', path: encodeURI('/assets/prensa/Prensa_2021/Nota_ElMer_20211028_Docentes_crean_nuevo_gremio.pdf'), type: 'Nota', source: 'El Mercurio', date: '28/10/2021' },
   
   // 2022
-  { id: 7, title: 'Educación Libre y Diversa', year: '2022', path: encodeURI('/react/assets/prensa/Prensa_2022/20220110_ElMer_Carta_Educ.Libre_y_Diversa.pdf'), type: 'Carta', source: 'El Mercurio', date: '10/01/2022' },
-  { id: 8, title: 'CC.PP pone en duda retorno a clases', year: '2022', path: encodeURI('/react/assets/prensa/Prensa_2022/20220202_ElMer_Nota_CC.PP_pone_en_duda_retorno_a_clases.pdf'), type: 'Nota', source: 'El Mercurio', date: '02/02/2022' },
-  { id: 9, title: 'Clases remotas', year: '2022', path: encodeURI('/react/assets/prensa/Prensa_2022/20220321_LaTer_Carta_Clases_remotasjpeg.pdf'), type: 'Carta', source: 'La Tercera', date: '21/03/2022' },
-  { id: 10, title: 'Emplazan al Mineduc a publicar', year: '2022', path: encodeURI('/react/assets/prensa/Prensa_2022/20220402_ElMer_Nota_Emplazan_al_Mineduc_a_publicar.pdf'), type: 'Nota', source: 'El Mercurio', date: '02/04/2022' },
-  // { id: 11, title: 'Asociación alternativa al CC.PP', year: '2022', path: encodeURI('/react/assets/prensa/Prensa_2022/20220408_ElMer_Nota_Asociacion_alternativa_al_CC.PP..pdf'), type: 'Nota', source: 'El Mercurio', date: '08/04/2022' },
-  // { id: 12, title: 'Entrevista a José Luis Velasco', year: '2022', path: encodeURI('/react/assets/prensa/Prensa_2022/20220412_CNN_Entrevista_JoseLuisVelasco.mov'), type: 'Entrevista', source: 'CNN', date: '12/04/2022' },
+  { id: 7, title: 'Educación Libre y Diversa', year: '2022', path: encodeURI('/assets/prensa/Prensa_2022/20220110_ElMer_Carta_Educ.Libre_y_Diversa.pdf'), type: 'Carta', source: 'El Mercurio', date: '10/01/2022' },
+  { id: 8, title: 'CC.PP pone en duda retorno a clases', year: '2022', path: encodeURI('/assets/prensa/Prensa_2022/20220202_ElMer_Nota_CC.PP_pone_en_duda_retorno_a_clases.pdf'), type: 'Nota', source: 'El Mercurio', date: '02/02/2022' },
+  { id: 9, title: 'Clases remotas', year: '2022', path: encodeURI('/assets/prensa/Prensa_2022/20220321_LaTer_Carta_Clases_remotasjpeg.pdf'), type: 'Carta', source: 'La Tercera', date: '21/03/2022' },
+  { id: 10, title: 'Emplazan al Mineduc a publicar', year: '2022', path: encodeURI('/assets/prensa/Prensa_2022/20220402_ElMer_Nota_Emplazan_al_Mineduc_a_publicar.pdf'), type: 'Nota', source: 'El Mercurio', date: '02/04/2022' },
+  // { id: 11, title: 'Asociación alternativa al CC.PP', year: '2022', path: encodeURI('/assets/prensa/Prensa_2022/20220408_ElMer_Nota_Asociacion_alternativa_al_CC.PP..pdf'), type: 'Nota', source: 'El Mercurio', date: '08/04/2022' },
+  // { id: 12, title: 'Entrevista a José Luis Velasco', year: '2022', path: encodeURI('/assets/prensa/Prensa_2022/20220412_CNN_Entrevista_JoseLuisVelasco.mov'), type: 'Entrevista', source: 'CNN', date: '12/04/2022' },
   
   // 2023
-  { id: 13, title: 'De otro planeta', year: '2023', path: encodeURI('/react/assets/prensa/Prensa_2023/20230629_Carta_LaTer_De_otro_planeta.pdf'), type: 'Carta', source: 'La Tercera', date: '29/06/2023' },
-  { id: 14, title: 'Paro improcedente', year: '2023', path: encodeURI('/react/assets/prensa/Prensa_2023/20230723_Carta_ElMer_Paro_improcedente.pdf'), type: 'Carta', source: 'El Mercurio', date: '23/07/2023' },
-  // { id: 15, title: 'Entrevista a José Luis Velasco', year: '2023', path: encodeURI('/react/assets/prensa/Prensa_2023/20230726_Entrevista_ElLibero_JoseLuisVelasco.pdf'), type: 'Entrevista', source: 'El Líbero', date: '26/07/2023' },
-  { id: 16, title: 'Paro CC.PP', year: '2023', path: encodeURI('/react/assets/prensa/Prensa_2023/20230801_Nota_ElMer_Paro_CC.PP..pdf'), type: 'Nota', source: 'El Mercurio', date: '01/08/2023' },
+  { id: 13, title: 'De otro planeta', year: '2023', path: encodeURI('/assets/prensa/Prensa_2023/20230629_Carta_LaTer_De_otro_planeta.pdf'), type: 'Carta', source: 'La Tercera', date: '29/06/2023' },
+  { id: 14, title: 'Paro improcedente', year: '2023', path: encodeURI('/assets/prensa/Prensa_2023/20230723_Carta_ElMer_Paro_improcedente.pdf'), type: 'Carta', source: 'El Mercurio', date: '23/07/2023' },
+  // { id: 15, title: 'Entrevista a José Luis Velasco', year: '2023', path: encodeURI('/assets/prensa/Prensa_2023/20230726_Entrevista_ElLibero_JoseLuisVelasco.pdf'), type: 'Entrevista', source: 'El Líbero', date: '26/07/2023' },
+  { id: 16, title: 'Paro CC.PP', year: '2023', path: encodeURI('/assets/prensa/Prensa_2023/20230801_Nota_ElMer_Paro_CC.PP..pdf'), type: 'Nota', source: 'El Mercurio', date: '01/08/2023' },
   
   // 2024
-  // { id: 17, title: 'Mérito, selección y excelencia', year: '2024', path: encodeURI('/react/assets/prensa/Prensa_2024/Carta_respuesta_ElMer_Merito_seleccion_y_excelencia.pdf'), type: 'Carta', source: 'El Mercurio', date: '15/03/2024' },
-  { id: 18, title: 'Tiempo de Convivencia', year: '2024', path: encodeURI('/react/assets/prensa/Prensa_2024/Carta_ElMer_20240518_Tiempo_de_Convivencia.pdf'), type: 'Carta', source: 'El Mercurio', date: '18/05/2024' },
-  { id: 19, title: 'La indiferencia a la violencia', year: '2024', path: encodeURI('/react/assets/prensa/Prensa_2024/Carta_LaTer_20240718_La_indiferencia_a_la_violencia.pdf'), type: 'Carta', source: 'La Tercera', date: '18/07/2024' },
-  { id: 20, title: 'El paro por violencia', year: '2024', path: encodeURI('/react/assets/prensa/Prensa_2024/Carta_LaTer_20240806_El_paro_por_violencia.pdf'), type: 'Carta', source: 'La Tercera', date: '06/08/2024' },
-  // { id: 21, title: 'Qué estamos haciendo mal', year: '2024', path: encodeURI('/react/assets/prensa/Prensa_2024/Carta_LaTer_20240909_Que_estamos_haciendo_mal.pdf'), type: 'Carta', source: 'La Tercera', date: '09/09/2024' },
-  // { id: 22, title: 'Romper el círculo', year: '2024', path: encodeURI('/react/assets/prensa/Prensa_2024/Carta_LaTer_20241028_Romper_el_circulo.pdf'), type: 'Carta', source: 'La Tercera', date: '28/10/2024' },
-  { id: 23, title: 'Asistir para aprender', year: '2024', path: encodeURI('/react/assets/prensa/Prensa_2024/Carta_LaTer_20241208_Asistir_para_aprender.pdf'), type: 'Carta', source: 'La Tercera', date: '08/12/2024' },
-  // { id: 24, title: 'Entrevista a José Luis Velasco', year: '2024', path: encodeURI('/react/assets/prensa/Prensa_2024/Entrevista_ElMer_20241101_JoseLuisVelasco.pdf'), type: 'Entrevista', source: 'El Mercurio', date: '01/11/2024' },
-  // { id: 25, title: 'Sin cupos escolares', year: '2024', path: encodeURI('/react/assets/prensa/Prensa_2024/Nota_ElMer_20240315_Sin_cupos_escolares.pdf'), type: 'Nota', source: 'El Mercurio', date: '15/03/2024' },
-  // { id: 26, title: 'Servicio Prime SAE', year: '2024', path: encodeURI('/react/assets/prensa/Prensa_2024/Nota_ElMer_20240416_Servicio_Prime_SAE.pdf'), type: 'Nota', source: 'El Mercurio', date: '16/04/2024' }
+  // { id: 17, title: 'Mérito, selección y excelencia', year: '2024', path: encodeURI('/assets/prensa/Prensa_2024/Carta_respuesta_ElMer_Merito_seleccion_y_excelencia.pdf'), type: 'Carta', source: 'El Mercurio', date: '15/03/2024' },
+  { id: 18, title: 'Tiempo de Convivencia', year: '2024', path: encodeURI('/assets/prensa/Prensa_2024/Carta_ElMer_20240518_Tiempo_de_Convivencia.pdf'), type: 'Carta', source: 'El Mercurio', date: '18/05/2024' },
+  { id: 19, title: 'La indiferencia a la violencia', year: '2024', path: encodeURI('/assets/prensa/Prensa_2024/Carta_LaTer_20240718_La_indiferencia_a_la_violencia.pdf'), type: 'Carta', source: 'La Tercera', date: '18/07/2024' },
+  { id: 20, title: 'El paro por violencia', year: '2024', path: encodeURI('/assets/prensa/Prensa_2024/Carta_LaTer_20240806_El_paro_por_violencia.pdf'), type: 'Carta', source: 'La Tercera', date: '06/08/2024' },
+  // { id: 21, title: 'Qué estamos haciendo mal', year: '2024', path: encodeURI('/assets/prensa/Prensa_2024/Carta_LaTer_20240909_Que_estamos_haciendo_mal.pdf'), type: 'Carta', source: 'La Tercera', date: '09/09/2024' },
+  // { id: 22, title: 'Romper el círculo', year: '2024', path: encodeURI('/assets/prensa/Prensa_2024/Carta_LaTer_20241028_Romper_el_circulo.pdf'), type: 'Carta', source: 'La Tercera', date: '28/10/2024' },
+  { id: 23, title: 'Asistir para aprender', year: '2024', path: encodeURI('/assets/prensa/Prensa_2024/Carta_LaTer_20241208_Asistir_para_aprender.pdf'), type: 'Carta', source: 'La Tercera', date: '08/12/2024' },
+  // { id: 24, title: 'Entrevista a José Luis Velasco', year: '2024', path: encodeURI('/assets/prensa/Prensa_2024/Entrevista_ElMer_20241101_JoseLuisVelasco.pdf'), type: 'Entrevista', source: 'El Mercurio', date: '01/11/2024' },
+  // { id: 25, title: 'Sin cupos escolares', year: '2024', path: encodeURI('/assets/prensa/Prensa_2024/Nota_ElMer_20240315_Sin_cupos_escolares.pdf'), type: 'Nota', source: 'El Mercurio', date: '15/03/2024' },
+  // { id: 26, title: 'Servicio Prime SAE', year: '2024', path: encodeURI('/assets/prensa/Prensa_2024/Nota_ElMer_20240416_Servicio_Prime_SAE.pdf'), type: 'Nota', source: 'El Mercurio', date: '16/04/2024' }
 ];
 
 export default function PrensaFiles() {

@@ -33,22 +33,22 @@ const documentosPorCategoria: Record<Categoria, { titulo: string; documentos: Do
         id: 'propuestas-reactivacion-educativa',
         title: "Propuestas para la Reactivación Educativa",
         description: "Documento con propuestas clave para la educación post-pandemia.",
-        url: "/react/assets/analisis/Propuestas-Reactivacion-Educativa.pdf",
+        url: "/assets/analisis/Propuestas-Reactivacion-Educativa.pdf",
         fecha: "2023",
         categoria: 'analisis',
         destacado: true,
         type: 'pdf',
-        directUrl: "/react/assets/analisis/Propuestas-Reactivacion-Educativa.pdf"
+        directUrl: "/assets/analisis/Propuestas-Reactivacion-Educativa.pdf"
       },
       {
         id: 'minuta-xd',
         title: "Minuta Base de la nueva Constitución",
         description: "Minuta de análisis educativo.",
-        url: "/react/assets/analisis/minuta-xd.pdf",
+        url: "/assets/analisis/minuta-xd.pdf",
         fecha: "2023",
         categoria: 'analisis',
         type: 'pdf',
-        directUrl: "/react/assets/analisis/minuta-xd.pdf"
+        directUrl: "/assets/analisis/minuta-xd.pdf"
       }
     ]
   },
@@ -60,31 +60,31 @@ const documentosPorCategoria: Record<Categoria, { titulo: string; documentos: Do
         id: 'minuta-22022-simce',
         title: "Minuta SIMCE 2022",
         description: "Minuta sobre resultados SIMCE 2022.",
-        url: "/react/assets/declaraciones/Minuta-22022-SIMCE.pdf",
+        url: "/assets/declaraciones/Minuta-22022-SIMCE.pdf",
         fecha: "2022",
         categoria: 'declaraciones',
         type: 'pdf',
-        directUrl: "/react/assets/declaraciones/Minuta-22022-SIMCE.pdf"
+        directUrl: "/assets/declaraciones/Minuta-22022-SIMCE.pdf"
       },
       {
         id: 'declaracion-simce-2022',
         title: "Declaración SIMCE 2022",
         description: "Declaración pública sobre el SIMCE 2022.",
-        url: "/react/assets/declaraciones/declaracion-simce-2022.pdf",
+        url: "/assets/declaraciones/declaracion-simce-2022.pdf",
         fecha: "2022",
         categoria: 'declaraciones',
         type: 'pdf',
-        directUrl: "/react/assets/declaraciones/declaracion-simce-2022.pdf"
+        directUrl: "/assets/declaraciones/declaracion-simce-2022.pdf"
       },
       {
         id: 'toma-liceos',
         title: "Posición sobre Toma de Liceos",
         description: "Declaración oficial de ASEDUCH ante las ocupaciones estudiantiles y abandono de deberes.",
-        url: "/react/assets/declaraciones/toma-liceos.pdf",
+        url: "/assets/declaraciones/toma-liceos.pdf",
         fecha: "2023",
         categoria: 'declaraciones',
         type: 'pdf',
-        directUrl: "/react/assets/declaraciones/toma-liceos.pdf"
+        directUrl: "/assets/declaraciones/toma-liceos.pdf"
       }
     ]
   }, 
@@ -95,12 +95,12 @@ const documentosPorCategoria: Record<Categoria, { titulo: string; documentos: Do
         id: 'declaracion-estatutos',
         title: "Estatutos de la Asociación",
         description: "Documento oficial con los estatutos actualizados de ASEDUCH A.G.",
-        url: "/react/assets/declaraciones/Estatutos-ASEDUCH_7abr2022.pdf",
+        url: "/assets/declaraciones/Estatutos-ASEDUCH_7abr2022.pdf",
         fecha: "07/04/2022",
         categoria: 'declaraciones',
         destacado: true,
         type: 'pdf',
-        directUrl: "/react/assets/declaraciones/Estatutos-ASEDUCH_7abr2022.pdf"
+        directUrl: "/assets/declaraciones/Estatutos-ASEDUCH_7abr2022.pdf"
       },
     ]
   }
