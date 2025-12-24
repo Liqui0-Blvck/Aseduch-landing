@@ -1,14 +1,16 @@
-import React from 'react'
 import { Seo } from '../../../components/Seo'
 import { motion, type Variants } from 'framer-motion'
 import { Link } from 'react-router-dom'
 
 const requirements = [
-  "Profesionales de la Educación con título de profesor o educador (Ley 19.070 de 1991).",
-  "Profesionales con título de profesor o educador reconocido por el Estado.",
-  "Docentes con experiencia (contrato > 1 año) aunque no estén titulados.",
-  "Profesionales extranjeros con título validado según normas vigentes.",
-  "Asistentes de la Educación (Ley 19.464) con labor profesional o paradocente.",
+  "Personas que tengan un título de profesor o educador en Chile.",
+  "Las personas habilitadas legalmente para ejercer la docencia.",
+  "Personas que estén en proceso de obtener el título de docente o educador.",
+  "Personas que, sin tener el título, hayan trabajado como docentes en un establecimiento educacional durante 5 años, a lo menos, y estén afectas al D.F.L 7723.",
+  "Profesionales de la educación extranjeros que hayan validado su título.",
+  "Personas asistentes de la educación que sean profesionales.",
+  "Personas asistentes de la educación con funciones para docentes.",
+  "Personas asistentes de la educación con funciones de auxiliar.",
 ];
 
 
@@ -19,11 +21,6 @@ const InscriptionRequeriment = () => {
     show: { transition: { staggerChildren: 0.15 } },
   };
   const fadeIn: Variants = {
-    hidden: { opacity: 0, y: 20 },
-    show: { opacity: 1, y: 0, transition: { duration: 0.6 } },
-  };
-  
-  const fadeInUp: Variants = {
     hidden: { opacity: 0, y: 20 },
     show: { opacity: 1, y: 0, transition: { duration: 0.6 } },
   };
@@ -48,7 +45,7 @@ const InscriptionRequeriment = () => {
             Únete a ASEDUCH
           </motion.h1>
           <motion.p variants={fadeIn} className="text-lg text-gray-600">
-            Forma parte de la comunidad que impulsa una educación de calidad en Chile.
+            Súmate a una comunidad que fortalece la educación y defiende el bienestar de quienes educan.
           </motion.p>
           <Link
             target="_blank"

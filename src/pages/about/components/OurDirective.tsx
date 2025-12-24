@@ -5,7 +5,7 @@ import gaston_eduardo from "../../../assets/Gaston.jpeg";
 import james from "../../../assets/james.jpg";
 import jose_luis from "../../../assets/jose-luis.jpg";
 import tamara_constanzo from "../../../assets/tamara-constanzo.jpg";
-import sergio from "../../../assets/Sergio.jpeg"
+import maritza from "../../../assets/maritza-cott.jpg"
 
 const OurDirective = () => {
   const directiva = [
@@ -46,13 +46,15 @@ const OurDirective = () => {
           "Profesor de Estado en Historia y Geografía. Licenciado en Ciencias Jurídicas y Sociales. Magíster en Ciencias Políticas con mención en Participación Democrática.",
       },
       {
-        id: "sergio",
-        src: sergio,
-        alt: "Sergio Godoy Martinez",
-        title: "Sergio Godoy Martinez",
-        position: "Director Ejecutivo ASEDUCH",
+        id: "maritza",
+        src: maritza,
+        alt: "Maritza Cottenie",
+        title: "Maritza Cottenie",
+        position: "Directora Ejecutivo ASEDUCH",
         description: 
-          "Profesor de Estado en Historia y Geografía titulado en la Universidad de La Serena. Actualmente se desempeña como Director Ejecutivo de la Asociación de Educadores de Chile (ASEDUCH), liderando iniciativas orientadas al fortalecimiento del rol docente, el desarrollo de políticas públicas educativas y la representación gremial de los educadores a nivel nacional."
+          `Profesora de CCNN y Biología, Magíster en Educación de la P. Universidad
+          Católica, Post Título en Ciencias de La Familia con alta experiencia en docencia y
+          dirección de centros educativos a nivel escolar y univarsitario.`
 
       }
       

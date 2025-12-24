@@ -97,11 +97,51 @@ const documentosPorCategoria: Record<Categoria, { titulo: string; documentos: Do
         description: "Documento oficial con los estatutos actualizados de ASEDUCH A.G.",
         url: "/assets/declaraciones/Estatutos-ASEDUCH_7abr2022.pdf",
         fecha: "07/04/2022",
-        categoria: 'declaraciones',
+        categoria: 'estatutos',
         destacado: true,
         type: 'pdf',
         directUrl: "/assets/declaraciones/Estatutos-ASEDUCH_7abr2022.pdf"
       },
+      {
+        id: 'estatutos-aseduch-version-impresa',
+        title: "Estatutos ASEDUCH (versión PDF)",
+        description: "Versión en PDF de los estatutos de la Asociación de Educadores de Chile.",
+        url: "/assets/declaraciones/ESTATUTOSASOCIACIONDEEDUCADORESDECHILE.pdf",
+        fecha: "s/f",
+        categoria: 'estatutos',
+        type: 'pdf',
+        directUrl: "/assets/declaraciones/ESTATUTOSASOCIACIONDEEDUCADORESDECHILE.pdf"
+      },
+      {
+        id: 'reglamento-cuota-social',
+        title: "Reglamento de Cuota Social",
+        description: "Reglamento sobre cuota social de los socios de ASEDUCH.",
+        url: "/assets/declaraciones/ReglamentoCuotaSocial.pdf",
+        fecha: "s/f",
+        categoria: 'estatutos',
+        type: 'pdf',
+        directUrl: "/assets/declaraciones/ReglamentoCuotaSocial.pdf"
+      },
+      {
+        id: 'reglamento-elecciones',
+        title: "Reglamento de Elecciones",
+        description: "Reglamento que establece el procedimiento de elecciones internas en ASEDUCH.",
+        url: "/assets/declaraciones/ReglamentoElecciones.pdf",
+        fecha: "s/f",
+        categoria: 'estatutos',
+        type: 'pdf',
+        directUrl: "/assets/declaraciones/ReglamentoElecciones.pdf"
+      },
+      {
+        id: 'reglamento-estructura-organica',
+        title: "Reglamento de Estructura Orgánica",
+        description: "Reglamento de estructura orgánica y funcionamiento interno de ASEDUCH.",
+        url: "/assets/declaraciones/ReglamentoEstructuraOrganica.pdf",
+        fecha: "s/f",
+        categoria: 'estatutos',
+        type: 'pdf',
+        directUrl: "/assets/declaraciones/ReglamentoEstructuraOrganica.pdf"
+      }
     ]
   }
 };

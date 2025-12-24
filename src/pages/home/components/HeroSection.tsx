@@ -1,4 +1,4 @@
-import aseduch_grupo from '../../../assets/foto-aseduch-grupo.jpg';
+import aseduch_directorio from '../../../assets/aseduch-directorio.jpg'
 import { Link } from "react-router-dom";
 import { FaFacebook, FaInstagram, FaYoutube, FaLinkedin } from "react-icons/fa";
 import { FaX } from "react-icons/fa6";
@@ -16,8 +16,8 @@ export default function HeroSection() {
             Asociación de Educadores<br />de Chile <span className="text-4xl lg:text-5xl">A.G.</span>
           </h1>
           <p className="text-gray-700 text-xl lg:text-2xl mb-10 leading-relaxed">
-            Trabajando juntos por una educación de calidad<br />
-            y el bienestar de los educadores chilenos.
+            Impulsamos el bienestar de quienes educan
+            y fortalecemos una educación de calidad para Chile.
           </p>
           <div className="flex flex-col lg:flex-row justify-center lg:justify-start gap-4 w-full max-w-md mx-auto lg:max-w-none mb-8">
             <Link
@@ -61,7 +61,7 @@ export default function HeroSection() {
           <div className="relative w-full max-w-2xl aspect-[16/10] bg-gray-100 rounded-3xl overflow-hidden shadow-2xl flex items-center justify-center border-4 border-white">
             <img
               loading="lazy"
-              src={aseduch_grupo}
+              src={aseduch_directorio}
               alt='Equipo fundador de ASEDUCH'
               className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500"
             />

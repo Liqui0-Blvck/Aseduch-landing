@@ -3,357 +3,399 @@
 
   <url>
     <loc>https://aseduch.cl/</loc>
-    <lastmod>2025-06-18</lastmod>
+    <lastmod>2025-12-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   <url>
     <loc>https://aseduch.cl/about</loc>
-    <lastmod>2025-06-18</lastmod>
+    <lastmod>2025-12-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://aseduch.cl/about/vision-mision</loc>
-    <lastmod>2025-06-18</lastmod>
+    <lastmod>2025-12-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://aseduch.cl/about/values</loc>
-    <lastmod>2025-06-18</lastmod>
+    <lastmod>2025-12-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://aseduch.cl/about/directive</loc>
-    <lastmod>2025-06-18</lastmod>
+    <lastmod>2025-12-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://aseduch.cl/news</loc>
-    <lastmod>2025-06-18</lastmod>
+    <lastmod>2025-12-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://aseduch.cl/partners</loc>
-    <lastmod>2025-06-18</lastmod>
+    <lastmod>2025-12-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://aseduch.cl/partners/social-quotes</loc>
-    <lastmod>2025-06-18</lastmod>
+    <lastmod>2025-12-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://aseduch.cl/partners/benefits</loc>
-    <lastmod>2025-06-18</lastmod>
+    <lastmod>2025-12-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://aseduch.cl/partners/rights</loc>
-    <lastmod>2025-06-18</lastmod>
+    <lastmod>2025-12-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://aseduch.cl/partners/advices</loc>
-    <lastmod>2025-06-18</lastmod>
+    <lastmod>2025-12-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://aseduch.cl/media</loc>
-    <lastmod>2025-06-18</lastmod>
+    <lastmod>2025-12-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://aseduch.cl/foundation</loc>
-    <lastmod>2025-06-18</lastmod>
+    <lastmod>2025-12-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://aseduch.cl/foundation/activities</loc>
-    <lastmod>2025-06-18</lastmod>
+    <lastmod>2025-12-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://aseduch.cl/foundation/donations</loc>
-    <lastmod>2025-06-18</lastmod>
+    <lastmod>2025-12-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
+    <loc>https://aseduch.cl/news/3762</loc>
+    <lastmod>2025-12-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://aseduch.cl/news/3751</loc>
+    <lastmod>2025-12-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://aseduch.cl/news/3758</loc>
+    <lastmod>2025-12-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://aseduch.cl/news/3720</loc>
+    <lastmod>2025-12-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://aseduch.cl/news/3712</loc>
+    <lastmod>2025-12-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://aseduch.cl/news/3695</loc>
+    <lastmod>2025-12-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
     <loc>https://aseduch.cl/news/3613</loc>
-    <lastmod>2025-06-18</lastmod>
+    <lastmod>2025-12-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://aseduch.cl/news/3628</loc>
-    <lastmod>2025-06-18</lastmod>
+    <lastmod>2025-12-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://aseduch.cl/news/3473</loc>
-    <lastmod>2025-06-18</lastmod>
+    <lastmod>2025-12-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://aseduch.cl/news/3647</loc>
-    <lastmod>2025-06-18</lastmod>
+    <lastmod>2025-12-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://aseduch.cl/news/3523</loc>
-    <lastmod>2025-06-18</lastmod>
+    <lastmod>2025-12-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://aseduch.cl/news/3510</loc>
-    <lastmod>2025-06-18</lastmod>
+    <lastmod>2025-12-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://aseduch.cl/news/3498</loc>
-    <lastmod>2025-06-18</lastmod>
+    <lastmod>2025-12-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://aseduch.cl/news/3458</loc>
-    <lastmod>2025-06-18</lastmod>
+    <lastmod>2025-12-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://aseduch.cl/news/3486</loc>
-    <lastmod>2025-06-18</lastmod>
+    <lastmod>2025-12-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://aseduch.cl/news/3442</loc>
-    <lastmod>2025-06-18</lastmod>
+    <lastmod>2025-12-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://aseduch.cl/news/3394</loc>
-    <lastmod>2025-06-18</lastmod>
+    <lastmod>2025-12-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://aseduch.cl/news/3338</loc>
-    <lastmod>2025-06-18</lastmod>
+    <lastmod>2025-12-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://aseduch.cl/news/3266</loc>
-    <lastmod>2025-06-18</lastmod>
+    <lastmod>2025-12-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://aseduch.cl/news/3383</loc>
-    <lastmod>2025-06-18</lastmod>
+    <lastmod>2025-12-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://aseduch.cl/news/3304</loc>
-    <lastmod>2025-06-18</lastmod>
+    <lastmod>2025-12-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://aseduch.cl/news/3289</loc>
-    <lastmod>2025-06-18</lastmod>
+    <lastmod>2025-12-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://aseduch.cl/news/3361</loc>
-    <lastmod>2025-06-18</lastmod>
+    <lastmod>2025-12-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://aseduch.cl/news/3217</loc>
-    <lastmod>2025-06-18</lastmod>
+    <lastmod>2025-12-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://aseduch.cl/news/3229</loc>
-    <lastmod>2025-06-18</lastmod>
+    <lastmod>2025-12-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://aseduch.cl/news/3279</loc>
-    <lastmod>2025-06-18</lastmod>
+    <lastmod>2025-12-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://aseduch.cl/news/3254</loc>
-    <lastmod>2025-06-18</lastmod>
+    <lastmod>2025-12-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://aseduch.cl/news/3350</loc>
-    <lastmod>2025-06-18</lastmod>
+    <lastmod>2025-12-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://aseduch.cl/news/3204</loc>
-    <lastmod>2025-06-18</lastmod>
+    <lastmod>2025-12-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://aseduch.cl/news/3192</loc>
-    <lastmod>2025-06-18</lastmod>
+    <lastmod>2025-12-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://aseduch.cl/news/3180</loc>
-    <lastmod>2025-06-18</lastmod>
+    <lastmod>2025-12-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://aseduch.cl/news/3327</loc>
-    <lastmod>2025-06-18</lastmod>
+    <lastmod>2025-12-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://aseduch.cl/news/3372</loc>
-    <lastmod>2025-06-18</lastmod>
+    <lastmod>2025-12-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://aseduch.cl/news/3169</loc>
-    <lastmod>2025-06-18</lastmod>
+    <lastmod>2025-12-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://aseduch.cl/news/3155</loc>
-    <lastmod>2025-06-18</lastmod>
+    <lastmod>2025-12-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://aseduch.cl/news/3314</loc>
-    <lastmod>2025-06-18</lastmod>
+    <lastmod>2025-12-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://aseduch.cl/news/3105</loc>
-    <lastmod>2025-06-18</lastmod>
+    <lastmod>2025-12-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://aseduch.cl/news/3123</loc>
-    <lastmod>2025-06-18</lastmod>
+    <lastmod>2025-12-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://aseduch.cl/news/3241</loc>
-    <lastmod>2025-06-18</lastmod>
+    <lastmod>2025-12-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://aseduch.cl/news/3109</loc>
-    <lastmod>2025-06-18</lastmod>
+    <lastmod>2025-12-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://aseduch.cl/news/3404</loc>
-    <lastmod>2025-06-18</lastmod>
+    <lastmod>2025-12-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://aseduch.cl/news/3420</loc>
-    <lastmod>2025-06-18</lastmod>
+    <lastmod>2025-12-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

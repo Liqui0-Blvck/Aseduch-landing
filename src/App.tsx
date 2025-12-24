@@ -38,9 +38,10 @@ function Loader() {
 }
 
 export default function App() {
+  useScrollToTop();
+
   return (
     <>
-      {useScrollToTop()}
       {/* Carga Navbar bajo demanda */}
       <Suspense fallback={<Loader />}>
         <Navbar />

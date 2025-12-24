@@ -35,7 +35,7 @@ export default function Home() {
     <>
       <Seo 
         title="ASEDUCH | Asociación de Educadores de Chile"
-        description="ASEDUCH es la voz de los educadores chilenos, trabajando por una educación de calidad y el desarrollo profesional docente."
+        description="ASEDUCH reúne y representa a educadores en Chile, promoviendo el bienestar laboral, el desarrollo profesional y una educación de calidad."
         url="/"
       />
       <HeroSection />

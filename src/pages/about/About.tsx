@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Seo } from "../../components/Seo"
 import OurHistory from "./components/OurHistory";
 
-import directiva_grupo from "../../assets/foto-aseduch-grupo.jpg"; // Asegúrate de actualizar esta imagen
+import aseduch_directorio from '../../assets/aseduch-directorio.jpg'
 import CTA from "./components/CTA";
 
 export default function AboutPage() {
@@ -12,7 +12,7 @@ export default function AboutPage() {
     <>
       <Seo 
         title="Sobre Nosotros | ASEDUCH"
-        description="ASEDUCH es una organización sin fines de lucro que representa a los educadores de Chile, promoviendo el desarrollo profesional y la educación de calidad."
+        description="ASEDUCH es una organización sin fines de lucro que reúne y representa a educadores en Chile, promoviendo su desarrollo profesional y una educación de calidad."
         url="/about"
       />
       <section className="bg-white text-gray-800 py-20 overflow-hidden">
@@ -29,12 +29,12 @@ export default function AboutPage() {
             ¿Quiénes Somos?
           </h1>
           <p className="text-lg text-gray-600">
-            ASEDUCH es una organización sin fines de lucro que representa a los educadores de Chile, promoviendo el desarrollo profesional, la defensa de sus derechos y el fortalecimiento de la educación pública y de calidad.
+            ASEDUCH es una organización sin fines de lucro que reúne a docentes, educadores y asistentes de la educación. Promovemos el desarrollo profesional, la defensa de la dignidad laboral y el fortalecimiento de una educación de calidad, inclusiva y plural.
           </p>
         </motion.div>
         
 
-        <OurHistory directiva_grupo={directiva_grupo}/>
+        <OurHistory directiva_grupo={aseduch_directorio}/>
         <CTA/>
       </div>
     </section>

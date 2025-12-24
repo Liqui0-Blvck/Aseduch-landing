@@ -28,8 +28,7 @@ const Rights = () => {
         title: "Derechos de los socios",
         items: [
           "Ser informado de las actividades nacionales, regionales y provinciales.",
-          "Recibir orientación ante intereses profesionales.",
-          "Acceder a perfeccionamiento y crecimiento profesional.",
+          "Recibir orientación frente a sus derechos y necesidades en su ejercicio laboral.",
           "Obtener prestaciones sociales establecidas por la Asociación.",
           "Elegir y ser elegido en los organismos de ASEDUCH.",
           "Renunciar con los mismos derechos que al ingresar.",
@@ -48,7 +47,7 @@ const Rights = () => {
         {/* Título */}
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-gray-900">Derechos y Deberes de los Socios</h2>
-          <p className="text-gray-500 mt-2">(ARTÍCULO 7° de los ESTATUTOS DE ASEDUCH)</p>
+          <p className="text-gray-500 mt-2">(ARTÍCULO 6° de los ESTATUTOS DE ASEDUCH)</p>
         </div>
 
         {/* Cards */}
